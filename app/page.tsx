@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "./scroll-reveal";
 
 export const metadata: Metadata = {
   title: "Sua Técnica no Pódio | Maria Lisboa",
@@ -65,6 +66,7 @@ const differenceCards = [
 export default function Home() {
   return (
     <main>
+      <ScrollReveal />
       <section className="hero" aria-labelledby="hero-title">
         <img className="hero__texture" src={asset("2e533292-e11e-49bb-88c7-a836c00a9ac8.webp")} alt="" />
         <img className="hero__halo hero__halo--left" src={asset("17f0a2e3-b3f4-4190-8f17-5bf4d87e51b3.svg")} alt="" />
@@ -85,12 +87,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="manifesto"><p><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
+      <section className="manifesto"><p data-reveal="up"><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
 
       <section className="about section-fixed">
         <div className="about__word" aria-hidden="true">MARIA LISBOA</div>
-        <img className="about__portrait" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.webp")} alt="Maria Lisboa" />
-        <div className="about__copy">
+        <img className="about__portrait" data-reveal="left" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.webp")} alt="Maria Lisboa" />
+        <div className="about__copy" data-reveal="right">
           <p className="eyebrow">Quem sou eu?</p><h2>Maria Lisboa</h2><span className="line" />
           <p>Eu sou a Maria Lisboa, referência em Clássico Fio a Fio e Efeitos Naturais. Atuo há mais de 5 anos no mercado e atualmente sou mentora com selo de formação internacional, jurada e palestrante.</p>
           <p>Com certificações nacionais e internacionais, me tornei multicampeã em grandes campeonatos do Brasil e do mundo, com destaque para o Grand Prix do Interlash e o 1º lugar em um evento presencial na Itália, em 2025.</p>
@@ -99,56 +101,56 @@ export default function Home() {
       </section>
 
       <section className="curriculum section-fixed">
-        <header className="section-heading"><h2>Tudo o que você vai <em>dominar</em></h2><p>Da base técnica ao posicionamento comercial: um programa completo<br />construído sobre critérios de campeonato.</p><span className="line" /></header>
+        <header className="section-heading" data-reveal="up"><h2>Tudo o que você vai <em>dominar</em></h2><p>Da base técnica ao posicionamento comercial: um programa completo<br />construído sobre critérios de campeonato.</p><span className="line" /></header>
         <div className="curriculum__grid">
-          {curriculum.map(([label, icon]) => <div className="curriculum__item" key={label}><span><img src={asset(icon)} alt="" /></span><p>{label}</p></div>)}
+          {curriculum.map(([label, icon]) => <div className="curriculum__item" data-reveal="up" key={label}><span><img src={asset(icon)} alt="" /></span><p>{label}</p></div>)}
         </div>
       </section>
 
       <section className="results section-fixed">
-        <header className="section-heading"><h2>Resultados reais de alunas</h2><span className="line" /></header>
+        <header className="section-heading" data-reveal="up"><h2>Resultados reais de alunas</h2><span className="line" /></header>
         <div className="results__grid">
-          {resultImages.map((src, index) => <div className={`results__card results__card--${index + 1}`} key={src}><img src={asset(src)} alt={`Resultado de aluna ${index + 1}`} />{index === 4 && <img className="results__overlay" src={asset("d1b177a3-c042-43c8-93d0-620faf9a5515.webp")} alt="" />}</div>)}
+          {resultImages.map((src, index) => <div className={`results__card results__card--${index + 1}`} data-reveal="up" key={src}><img src={asset(src)} alt={`Resultado de aluna ${index + 1}`} />{index === 4 && <img className="results__overlay" src={asset("d1b177a3-c042-43c8-93d0-620faf9a5515.webp")} alt="" />}</div>)}
         </div>
-        <a className="outline-button" href={whatsapp} target="_blank" rel="noreferrer">Quero entregar resultados assim</a>
+        <a className="outline-button" data-reveal="up" href={whatsapp} target="_blank" rel="noreferrer">Quero entregar resultados assim</a>
       </section>
 
       <section className="schedule section-fixed">
-        <div className="schedule__panel">
+        <div className="schedule__panel" data-reveal="up">
           <header className="section-heading section-heading--light"><h2>1 dia intensivo de <em>muito conhecimento</em></h2><span className="line" /></header>
           <div className="schedule__grid">
             {[
               ["08:00 — 13:00", "Manhã", "Fundamentos técnicos, mapeamentos, curvaturas e a base do método de campeonato.", "dd73a206-db3d-461d-9b32-d57567184346.svg"],
               ["13:00", "Pausa para o almoço", "Intervalo para descanso antes do bloco prático da tarde.", "9467639a-7583-4337-ae4f-18d012a45bc2.svg"],
               ["14:00 — 19:00", "Tarde", "Aplicação, refinamento, critérios de avaliação e mentalidade de sucesso.", "388b00be-a102-461b-8f38-d5610c98121c.svg"],
-            ].map(([time, title, description, icon]) => <article className="schedule__card" key={title}><span className="schedule__icon"><img src={asset(icon)} alt="" /></span><p className="schedule__time"><img src={asset("f7399d4f-2c56-4d79-b316-4fe511c64be6.svg")} alt="" />{time}</p><h3>{title}</h3><p>{description}</p></article>)}
+            ].map(([time, title, description, icon]) => <article className="schedule__card" data-reveal="up" key={title}><span className="schedule__icon"><img src={asset(icon)} alt="" /></span><p className="schedule__time"><img src={asset("f7399d4f-2c56-4d79-b316-4fe511c64be6.svg")} alt="" />{time}</p><h3>{title}</h3><p>{description}</p></article>)}
           </div>
         </div>
       </section>
 
       <section className="difference section-fixed">
-        <header className="section-heading"><h2>Por que esta formação é <em>diferente</em></h2><span className="line" /></header>
-        <div className="difference__grid">{differenceCards.map(([title, description, icon]) => <article className="difference__card" key={title}><span><img src={asset(icon)} alt="" /></span><h3>{title}</h3><p>{description}</p></article>)}</div>
+        <header className="section-heading" data-reveal="up"><h2>Por que esta formação é <em>diferente</em></h2><span className="line" /></header>
+        <div className="difference__grid">{differenceCards.map(([title, description, icon]) => <article className="difference__card" data-reveal="up" key={title}><span><img src={asset(icon)} alt="" /></span><h3>{title}</h3><p>{description}</p></article>)}</div>
       </section>
 
       <section className="testimonials section-fixed">
-        <header className="section-heading"><h2>O que as alunas <em>enviam</em> depois</h2><p>Mensagens recebidas de alunas que passaram pelas formações e mentorias da Maria Lisboa.</p><span className="line" /></header>
-        <div className="testimonials__grid">{testimonials.map((src, index) => <div className={`testimonial testimonial--${index + 1}`} key={src}><img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} /></div>)}</div>
+        <header className="section-heading" data-reveal="up"><h2>O que as alunas <em>enviam</em> depois</h2><p>Mensagens recebidas de alunas que passaram pelas formações e mentorias da Maria Lisboa.</p><span className="line" /></header>
+        <div className="testimonials__grid">{testimonials.map((src, index) => <div className={`testimonial testimonial--${index + 1}`} data-reveal="up" key={src}><img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} /></div>)}</div>
       </section>
 
       <section className="investment section-fixed">
-        <header className="section-heading"><h2>Um dia que muda o seu <em>patamar técnico</em></h2><span className="line" /></header>
-        <div className="investment__card"><p className="eyebrow">Atendimento personalizado</p><h3>Consulte valores<br />e condições</h3><p>Fale com nossa equipe no WhatsApp para receber todas as informações e garantir sua vaga.</p><a className="whatsapp-button whatsapp-button--large" href={whatsapp} target="_blank" rel="noreferrer">Chamar no WhatsApp</a></div>
+        <header className="section-heading" data-reveal="up"><h2>Um dia que muda o seu <em>patamar técnico</em></h2><span className="line" /></header>
+        <div className="investment__card" data-reveal="up"><p className="eyebrow">Atendimento personalizado</p><h3>Consulte valores<br />e condições</h3><p>Fale com nossa equipe no WhatsApp para receber todas as informações e garantir sua vaga.</p><a className="whatsapp-button whatsapp-button--large" href={whatsapp} target="_blank" rel="noreferrer">Chamar no WhatsApp</a></div>
       </section>
 
       <section className="final-cta section-fixed">
         <div className="final-cta__word" aria-hidden="true">MARIA LISBOA</div>
-        <img src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa" />
-        <div className="final-cta__copy"><h2>Pronta para<br />subir ao <em>pódio</em>?</h2><p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p><a className="dark-button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a></div>
+        <img data-reveal="right" src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa" />
+        <div className="final-cta__copy" data-reveal="left"><h2>Pronta para<br />subir ao <em>pódio</em>?</h2><p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p><a className="dark-button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a></div>
       </section>
 
       <footer className="footer">
-        <div className="footer__grid">
+        <div className="footer__grid" data-reveal="up">
           <div><div className="footer__brand"><span>Sua técnica no</span><strong>Pódio</strong></div><p>Mentoria de extensão de cílios com Maria Lisboa.</p></div>
           <div><h2>Contato</h2><address>Rua Prefeito Pedro Moreira Borges, 345, 2º piso — Centro, Estiva, MG<br /><a href="tel:+5535997458386">(35) 99745-8386</a><br /><a href="https://instagram.com/marialisboaacademy" target="_blank" rel="noreferrer">@marialisboaacademy</a></address></div>
           <div><h2>Institucional</h2><nav><a href="#">Termos de uso</a><a href="#">Política de privacidade</a></nav></div>
