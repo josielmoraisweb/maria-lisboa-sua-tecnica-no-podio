@@ -71,7 +71,14 @@ export default function Home() {
         <img
           className="hero__mobile-art"
           src={asset("hero-mobile-podio.webp")}
-          alt="Maria Lisboa — mais de 16 vezes campeã em campeonatos internacionais. Sua próxima conquista começa aqui."
+          alt="Sua Técnica no Pódio com Maria Lisboa — formação presencial com critérios de campeonato."
+        />
+        <a
+          className="hero__mobile-whatsapp"
+          href={whatsapp}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chamar no WhatsApp"
         />
         <img className="hero__texture" src={asset("2e533292-e11e-49bb-88c7-a836c00a9ac8.webp")} alt="" />
         <img className="hero__halo hero__halo--left" src={asset("17f0a2e3-b3f4-4190-8f17-5bf4d87e51b3.svg")} alt="" />

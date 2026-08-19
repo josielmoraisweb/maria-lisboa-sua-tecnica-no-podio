@@ -40,7 +40,7 @@ a { color: inherit; }
 }
 
 .hero { position: relative; height: 846px; overflow: hidden; background: #b9a6a4; }
-.hero__mobile-art { display: none; }
+.hero__mobile-art, .hero__mobile-whatsapp { display: none; }
 .hero__texture { position: absolute; width: 2068px; height: 3675px; left: calc(50% - 988px); top: -1102px; object-fit: cover; opacity: .37; }
 .hero__halo { position: absolute; pointer-events: none; }
 .hero__halo--left { width: 1620px; height: 1688px; left: -310px; top: -354px; }
@@ -256,7 +256,7 @@ a { color: inherit; }
     width: 100%;
     height: auto;
     min-height: 0;
-    aspect-ratio: 800 / 783;
+    aspect-ratio: 800 / 1172;
     background: #e3d6d0;
   }
 
@@ -265,6 +265,33 @@ a { color: inherit; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .hero__mobile-whatsapp {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 13.56%;
+    top: 86.26%;
+    width: 69.13%;
+    height: 8.01%;
+    border-radius: 999px;
+  }
+
+  .hero__mobile-whatsapp:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+  }
+
+  .manifesto {
+    min-height: 0;
+    padding: 24px 22px;
+  }
+
+  .manifesto p {
+    width: min(680px, 100%);
+    font-size: clamp(15px, 2.25vw, 22px);
+    line-height: 1.45;
   }
 
   .hero__texture,
