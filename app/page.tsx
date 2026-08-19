@@ -70,7 +70,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <img
           className="hero__mobile-art"
-          src={asset("hero-mobile-podio.webp")}
+          src={asset("hero-mobile-podio-v2.webp")}
           alt="Sua Técnica no Pódio com Maria Lisboa — formação presencial com critérios de campeonato."
         />
         <a
