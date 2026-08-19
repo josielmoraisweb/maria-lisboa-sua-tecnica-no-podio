@@ -34,24 +34,24 @@ const curriculum = [
 ];
 
 const resultImages = [
-  "bb2686b2-6d47-42eb-a2d0-c3dfb6973086.png",
-  "200c01e4-d8ab-4071-be6b-92a9c3b8db7f.png",
-  "45b2b6ab-24a7-451e-a6b1-0e1efa48c403.png",
-  "c001a2a3-48e4-4f9c-90fa-918e306c6e07.png",
-  "543fb066-01f2-49e1-ad5f-3da851694c39.png",
-  "c8785258-1ad7-4c28-af54-c4ec231574a4.png",
-  "ccf23456-468b-4468-8616-55c8029e5f88.png",
-  "b4b87eea-d3c1-4605-be93-bc761b855917.png",
-  "91081192-3714-479c-836d-50bf93e06c52.png",
+  "bb2686b2-6d47-42eb-a2d0-c3dfb6973086.webp",
+  "200c01e4-d8ab-4071-be6b-92a9c3b8db7f.webp",
+  "45b2b6ab-24a7-451e-a6b1-0e1efa48c403.webp",
+  "c001a2a3-48e4-4f9c-90fa-918e306c6e07.webp",
+  "543fb066-01f2-49e1-ad5f-3da851694c39.webp",
+  "c8785258-1ad7-4c28-af54-c4ec231574a4.webp",
+  "ccf23456-468b-4468-8616-55c8029e5f88.webp",
+  "b4b87eea-d3c1-4605-be93-bc761b855917.webp",
+  "91081192-3714-479c-836d-50bf93e06c52.webp",
 ];
 
 const testimonials = [
-  "f15b0b03-7dd4-4b94-a0bd-8aef8869d846.png",
-  "ed5711ae-6c3f-48ea-abb1-cade6d458e1c.png",
-  "e6e18518-f82e-4d27-9fa2-768112f4e577.png",
-  "42246c63-d4f0-44a8-89bd-e8171204282b.png",
-  "45f53a95-3be7-40bd-b308-c54fa330abeb.png",
-  "20646b31-c321-4581-a3b3-9ed75326d82f.png",
+  "f15b0b03-7dd4-4b94-a0bd-8aef8869d846.webp",
+  "ed5711ae-6c3f-48ea-abb1-cade6d458e1c.webp",
+  "e6e18518-f82e-4d27-9fa2-768112f4e577.webp",
+  "42246c63-d4f0-44a8-89bd-e8171204282b.webp",
+  "45f53a95-3be7-40bd-b308-c54fa330abeb.webp",
+  "20646b31-c321-4581-a3b3-9ed75326d82f.webp",
 ];
 
 const differenceCards = [
@@ -66,14 +66,14 @@ export default function Home() {
   return (
     <main>
       <section className="hero" aria-labelledby="hero-title">
-        <img className="hero__texture" src={asset("2e533292-e11e-49bb-88c7-a836c00a9ac8.png")} alt="" />
+        <img className="hero__texture" src={asset("2e533292-e11e-49bb-88c7-a836c00a9ac8.webp")} alt="" />
         <img className="hero__halo hero__halo--left" src={asset("17f0a2e3-b3f4-4190-8f17-5bf4d87e51b3.svg")} alt="" />
-        <img className="hero__portrait" src={asset("9f092faf-9f36-4c5a-8731-0fdcf1d4bf77.png")} alt="Maria Lisboa" />
+        <img className="hero__portrait" src={asset("9f092faf-9f36-4c5a-8731-0fdcf1d4bf77.webp")} alt="Maria Lisboa" />
         <div className="hero__photos" aria-hidden="true">
-          <span><img src={asset("261551d3-e865-4f2e-92ad-41a18439ca10.png")} alt="" /></span>
-          <span><img src={asset("ca73ea98-4dea-4e17-a956-a65ab2293c6c.png")} alt="" /></span>
+          <span><img src={asset("261551d3-e865-4f2e-92ad-41a18439ca10.webp")} alt="" /></span>
+          <span><img src={asset("ca73ea98-4dea-4e17-a956-a65ab2293c6c.webp")} alt="" /></span>
         </div>
-        <img className="hero__light" src={asset("57494273-2463-4204-a167-b63eb9a0d514.png")} alt="" />
+        <img className="hero__light" src={asset("57494273-2463-4204-a167-b63eb9a0d514.webp")} alt="" />
         <img className="hero__glow hero__glow--top" src={asset("ca8201c1-1042-4ad5-afce-e91ce8001f1d.svg")} alt="" />
         <img className="hero__glow hero__glow--bottom" src={asset("7e635ac2-ebfd-4035-bad6-5488c746a927.svg")} alt="" />
         <div className="hero__content">
@@ -89,7 +89,7 @@ export default function Home() {
 
       <section className="about section-fixed">
         <div className="about__word" aria-hidden="true">MARIA LISBOA</div>
-        <img className="about__portrait" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.png")} alt="Maria Lisboa" />
+        <img className="about__portrait" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.webp")} alt="Maria Lisboa" />
         <div className="about__copy">
           <p className="eyebrow">Quem sou eu?</p><h2>Maria Lisboa</h2><span className="line" />
           <p>Eu sou a Maria Lisboa, referência em Clássico Fio a Fio e Efeitos Naturais. Atuo há mais de 5 anos no mercado e atualmente sou mentora com selo de formação internacional, jurada e palestrante.</p>
@@ -108,7 +108,7 @@ export default function Home() {
       <section className="results section-fixed">
         <header className="section-heading"><h2>Resultados reais de alunas</h2><span className="line" /></header>
         <div className="results__grid">
-          {resultImages.map((src, index) => <div className={`results__card results__card--${index + 1}`} key={src}><img src={asset(src)} alt={`Resultado de aluna ${index + 1}`} />{index === 4 && <img className="results__overlay" src={asset("d1b177a3-c042-43c8-93d0-620faf9a5515.png")} alt="" />}</div>)}
+          {resultImages.map((src, index) => <div className={`results__card results__card--${index + 1}`} key={src}><img src={asset(src)} alt={`Resultado de aluna ${index + 1}`} />{index === 4 && <img className="results__overlay" src={asset("d1b177a3-c042-43c8-93d0-620faf9a5515.webp")} alt="" />}</div>)}
         </div>
         <a className="outline-button" href={whatsapp} target="_blank" rel="noreferrer">Quero entregar resultados assim</a>
       </section>
@@ -143,7 +143,7 @@ export default function Home() {
 
       <section className="final-cta section-fixed">
         <div className="final-cta__word" aria-hidden="true">MARIA LISBOA</div>
-        <img src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.png")} alt="Maria Lisboa" />
+        <img src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa" />
         <div className="final-cta__copy"><h2>Pronta para<br />subir ao <em>pódio</em>?</h2><p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p><a className="dark-button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a></div>
       </section>
 
