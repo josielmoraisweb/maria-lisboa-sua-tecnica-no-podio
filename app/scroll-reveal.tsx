@@ -1,12 +1,9 @@
-"use client";
-
-import { useEffect } from "react";
-
-export function ScrollReveal() {
-  useEffect(() => {
+const revealScript = `
+(() => {
+  const init = () => {
     const root = document.documentElement;
     const elements = Array.from(
-      document.querySelectorAll<HTMLElement>("[data-reveal]"),
+      document.querySelectorAll("[data-reveal]"),
     );
 
     if (!elements.length) return;
@@ -15,7 +12,7 @@ export function ScrollReveal() {
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       elements.forEach((element) => element.classList.add("is-visible"));
-      return () => root.classList.remove("reveal-enabled");
+      return;
     }
 
     const observer = new IntersectionObserver(
@@ -34,12 +31,16 @@ export function ScrollReveal() {
     );
 
     elements.forEach((element) => observer.observe(element));
+  };
 
-    return () => {
-      observer.disconnect();
-      root.classList.remove("reveal-enabled");
-    };
-  }, []);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
+})();
+`;
 
-  return null;
+export function ScrollReveal() {
+  return <script dangerouslySetInnerHTML={{ __html: revealScript }} />;
 }
