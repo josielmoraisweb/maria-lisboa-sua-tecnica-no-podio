@@ -81,11 +81,16 @@ export default function Home() {
       <ScrollReveal />
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__visual" aria-hidden="true">
-          <img className="hero__portrait" src={asset("9f092faf-9f36-4c5a-8731-0fdcf1d4bf77.webp")} alt="" />
+          <img className="hero__texture" src={asset("hero-textura.webp")} alt="" />
+          <img className="hero__halo hero__halo--left" src={asset("hero-halo.svg")} alt="" />
+          <img className="hero__portrait" src={asset("hero-maria.webp")} alt="" />
           <div className="hero__photos">
-            <span><img src={asset("b4b87eea-d3c1-4605-be93-bc761b855917.webp")} alt="" /></span>
-            <span><img src={asset("ca73ea98-4dea-4e17-a956-a65ab2293c6c.webp")} alt="" /></span>
+            <span><img src={asset("hero-olho-1.webp")} alt="" /></span>
+            <span><img src={asset("hero-olho-2.webp")} alt="" /></span>
           </div>
+          <img className="hero__light" src={asset("hero-luz.webp")} alt="" />
+          <img className="hero__glow hero__glow--top" src={asset("hero-glow-top.svg")} alt="" />
+          <img className="hero__glow hero__glow--bottom" src={asset("hero-glow-bottom.svg")} alt="" />
         </div>
         <div className="hero__content" data-reveal="left">
           <h1 className="brand-title" id="hero-title" aria-label="Sua Técnica no Pódio com Maria Lisboa"><span>Sua Técnica no</span><strong>Pódio</strong></h1>
@@ -162,15 +167,14 @@ export default function Home() {
         <div className="final-cta__copy" data-reveal="left">
           <h2>Pronta para<br />subir ao pódio?</h2>
           <p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p>
-          <a className="whatsapp-button final-cta__button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a>
         </div>
-        <img className="final-cta__portrait" src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa com seus troféus" />
+        <img className="final-cta__portrait" src={asset("pronta-maria.webp")} alt="Maria Lisboa com seus troféus" />
       </section>
 
       <footer className="footer">
         <div className="footer__grid">
           <div className="footer__brand">
-            <p><span>Sua Técnica no</span><strong>Pódio</strong></p>
+            <img src={asset("logo-sua-tecnica-podio.svg")} alt="Sua Técnica no Pódio" />
             <small>Mentoria de extensão de cílios com Maria Lisboa.</small>
           </div>
           <address className="footer__contact">
