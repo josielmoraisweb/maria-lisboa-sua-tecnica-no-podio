@@ -399,6 +399,7 @@ a { color: inherit; }
 .hero__glow--top { width: 611px; height: 611px; left: calc(50% + 429px); top: -340px; }
 .hero__glow--bottom { width: 1246px; height: 500px; left: calc(50% - 316px); top: 722px; }
 .hero__content { top: 248px; }
+.hero__mobile-logo { display: none; }
 .brand-title { height: auto; margin-bottom: 28px; }
 .hero__badges { margin-top: 28px; }
 .whatsapp-button { transition: transform .2s ease, filter .2s ease; }
@@ -577,4 +578,197 @@ a { color: inherit; }
   .final-cta__copy { top: 38px; }
   .final-cta__button { min-width: 0; width: 100%; font-size: 14px; }
   .final-cta__portrait { width: 480px; height: 675px; right: -125px; bottom: -170px; }
+}
+
+/* Frame Figma "Hero Mobile Podio" — aplicado somente a celular e tablet. */
+@media (max-width: 1024px) {
+  .hero {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 800 / 1172;
+    overflow: hidden;
+    background: #b9a6a4;
+  }
+
+  .hero__visual {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__texture {
+    display: block;
+    width: 184.927%;
+    height: 224.409%;
+    left: -31.875%;
+    top: -42.577%;
+    opacity: .37;
+  }
+
+  .hero__halo--left {
+    display: block;
+    width: 106.125%;
+    height: 78.157%;
+    left: 9.5%;
+    top: 2.73%;
+  }
+
+  .hero__portrait {
+    display: block;
+    width: 61.983%;
+    height: 58.447%;
+    left: 16.75%;
+    right: auto;
+    top: 4.863%;
+    opacity: 1;
+    object-fit: contain;
+    object-position: top center;
+  }
+
+  .hero__photos {
+    display: grid;
+    left: 62%;
+    right: auto;
+    top: 5.802%;
+    gap: 2.12vw;
+  }
+
+  .hero__photos span {
+    width: 28.166vw;
+    height: 28.166vw;
+    max-width: 288.42px;
+    max-height: 288.42px;
+    border-radius: 2.095vw;
+    box-shadow: none;
+  }
+
+  .hero__photos span:first-child img,
+  .hero__photos span:last-child img {
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+  }
+
+  .hero__photos span:first-child img { object-position: 48% 35%; }
+  .hero__photos span:last-child img { object-position: 50% 46%; }
+
+  .hero__light {
+    display: block;
+    width: 808.067%;
+    height: 367.629%;
+    left: -312%;
+    top: -339.932%;
+  }
+
+  .hero__glow--top {
+    display: block;
+    width: 76.375%;
+    height: 52.133%;
+    left: 173.625%;
+    top: -29.01%;
+  }
+
+  .hero__glow--bottom {
+    display: block;
+    width: 155.75%;
+    height: 42.662%;
+    left: 80.5%;
+    top: 61.604%;
+  }
+
+  .hero__content {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .hero__mobile-logo {
+    display: block;
+    position: absolute;
+    width: 26.123%;
+    height: 7.126%;
+    left: 34.75%;
+    top: 45.137%;
+  }
+
+  .hero .brand-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .hero__lead,
+  .hero__note {
+    position: absolute;
+    left: 8.2%;
+    width: 83.6%;
+    margin: 0;
+    color: #75655b;
+    text-align: center;
+    font-family: "Jost", sans-serif;
+    font-size: 3.6735vw;
+    line-height: 4.5865vw;
+  }
+
+  .hero__lead { top: 54.607%; }
+  .hero__note {
+    top: 67.065%;
+    font-style: italic;
+    line-height: 4.423vw;
+  }
+
+  .hero__badges {
+    position: absolute;
+    left: 6.375%;
+    top: 78.669%;
+    width: 87.25%;
+    height: 4.444%;
+    display: grid;
+    grid-template-columns: 421.216fr 258.347fr;
+    gap: 2.43%;
+    margin: 0;
+  }
+
+  .hero__badges li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+    border-width: .189vw;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 2.266vw;
+    line-height: 3.022vw;
+    letter-spacing: .057vw;
+  }
+
+  .whatsapp-button--hero {
+    position: absolute;
+    left: 15.438%;
+    top: 86.259%;
+    width: 69.125%;
+    max-width: none;
+    height: 8.007%;
+    margin: 0;
+    font-size: 4.171vw;
+    line-height: 3.921vw;
+  }
 }

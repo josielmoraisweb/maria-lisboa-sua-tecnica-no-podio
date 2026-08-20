@@ -93,6 +93,7 @@ export default function Home() {
           <img className="hero__glow hero__glow--bottom" src={asset("hero-glow-bottom.svg")} alt="" />
         </div>
         <div className="hero__content" data-reveal="left">
+          <img className="hero__mobile-logo" src={asset("hero-mobile-logo.svg")} alt="" aria-hidden="true" />
           <h1 className="brand-title" id="hero-title" aria-label="Sua Técnica no Pódio com Maria Lisboa"><span>Sua Técnica no</span><strong>Pódio</strong></h1>
           <p className="hero__lead">Eleve o nível da sua técnica com critérios de campeonato aplicados ao seu atendimento comercial. <strong>Aprenda o método e se destaque!</strong></p>
           <p className="hero__note">Uma imersão de 1 dia com Maria Lisboa, multicampeã, jurada e mentora, com selo de formação internacional.</p>
