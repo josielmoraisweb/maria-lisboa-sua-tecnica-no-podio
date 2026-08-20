@@ -35,15 +35,15 @@ const curriculum = [
 ];
 
 const resultImages = [
-  "bb2686b2-6d47-42eb-a2d0-c3dfb6973086.webp",
-  "200c01e4-d8ab-4071-be6b-92a9c3b8db7f.webp",
-  "45b2b6ab-24a7-451e-a6b1-0e1efa48c403.webp",
-  "c001a2a3-48e4-4f9c-90fa-918e306c6e07.webp",
-  "543fb066-01f2-49e1-ad5f-3da851694c39.webp",
-  "c8785258-1ad7-4c28-af54-c4ec231574a4.webp",
-  "ccf23456-468b-4468-8616-55c8029e5f88.webp",
-  "b4b87eea-d3c1-4605-be93-bc761b855917.webp",
-  "91081192-3714-479c-836d-50bf93e06c52.webp",
+  "result-figma-01.webp",
+  "result-figma-02.webp",
+  "result-figma-03.webp",
+  "result-figma-04.webp",
+  "result-figma-05.webp",
+  "result-figma-06.webp",
+  "result-figma-07.webp",
+  "result-figma-08.webp",
+  "result-figma-09.webp",
 ];
 
 const testimonials = [
@@ -122,9 +122,8 @@ export default function Home() {
       <section className="results section-fixed">
         <header className="section-heading" data-reveal="up"><h2>Resultados reais de alunas</h2><span className="line" /></header>
         <div className="results__grid">
-          {resultImages.map((src, index) => <div className={`results__card results__card--${index + 1}`} data-reveal="up" key={src}><img src={asset(src)} alt={`Resultado de aluna ${index + 1}`} />{index === 4 && <img className="results__overlay" src={asset("d1b177a3-c042-43c8-93d0-620faf9a5515.webp")} alt="" />}</div>)}
+          {resultImages.map((src, index) => <div className="results__card" data-reveal="up" key={src}><img src={asset(src)} alt={`Resultado de aluna ${index + 1}`} /></div>)}
         </div>
-        <a className="outline-button" data-reveal="up" href={whatsapp} target="_blank" rel="noreferrer">Quero entregar resultados assim</a>
       </section>
 
       <section className="schedule section-fixed">
