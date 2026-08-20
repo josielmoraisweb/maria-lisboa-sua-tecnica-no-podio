@@ -80,41 +80,25 @@ export default function Home() {
     <main>
       <ScrollReveal />
       <section className="hero" aria-labelledby="hero-title">
-        <h1 className="hero__sr-only" id="hero-title">Sua Técnica no Pódio com Maria Lisboa</h1>
-        <img
-          className="hero__desktop-art"
-          src={asset("hero-desktop-v2.webp")}
-          alt="Sua Técnica no Pódio com Maria Lisboa — imersão presencial com critérios de campeonato."
-        />
-        <a
-          className="hero__desktop-whatsapp"
-          href={whatsapp}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Chamar no WhatsApp"
-        />
-        <img
-          className="hero__mobile-art"
-          src={asset("hero-mobile-podio-v2.webp")}
-          alt="Sua Técnica no Pódio com Maria Lisboa — formação presencial com critérios de campeonato."
-        />
-        <a
-          className="hero__mobile-whatsapp"
-          href={whatsapp}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Chamar no WhatsApp"
-        />
+        <div className="hero__visual" aria-hidden="true">
+          <img className="hero__portrait" src={asset("9f092faf-9f36-4c5a-8731-0fdcf1d4bf77.webp")} alt="" />
+          <div className="hero__photos">
+            <span><img src={asset("b4b87eea-d3c1-4605-be93-bc761b855917.webp")} alt="" /></span>
+            <span><img src={asset("ca73ea98-4dea-4e17-a956-a65ab2293c6c.webp")} alt="" /></span>
+          </div>
+        </div>
+        <div className="hero__content" data-reveal="left">
+          <h1 className="brand-title" id="hero-title" aria-label="Sua Técnica no Pódio com Maria Lisboa"><span>Sua Técnica no</span><strong>Pódio</strong></h1>
+          <p className="hero__lead">Eleve o nível da sua técnica com critérios de campeonato aplicados ao seu atendimento comercial. <strong>Aprenda o método e se destaque!</strong></p>
+          <p className="hero__note">Uma imersão de 1 dia com Maria Lisboa, multicampeã, jurada e mentora, com selo de formação internacional.</p>
+          <ul className="hero__badges"><li>Método próprio com critérios de campeonato</li><li>Certificação internacional</li></ul>
+          <a className="whatsapp-button whatsapp-button--hero" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp">Chamar no WhatsApp</a>
+        </div>
       </section>
 
       <section className="manifesto"><p><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
 
       <section className="about section-fixed">
-        <img
-          className="about__mobile-art"
-          src={asset("quem-sou-eu-mobile-tablet.webp")}
-          alt="Quem sou eu? Maria Lisboa, referência em extensão de cílios, mentora, jurada e palestrante."
-        />
         <div className="about__word" aria-hidden="true">MARIA LISBOA</div>
         <img className="about__portrait" data-reveal="left" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.webp")} alt="Maria Lisboa" />
         <div className="about__copy" data-reveal="right">
@@ -159,8 +143,7 @@ export default function Home() {
 
       <section className="testimonials section-fixed">
         <header className="section-heading" data-reveal="up"><h2>O que as alunas <em>enviam</em> depois</h2><p>Mensagens recebidas de alunas que passaram pelas formações e mentorias da Maria Lisboa.</p><span className="line" /></header>
-        <div className="testimonials__grid" data-reveal="up"><img className="testimonials__desktop-art" src={asset("testimonials-desktop-grid.webp")} alt="Mensagens enviadas pelas alunas da Maria Lisboa" /></div>
-        <div className="testimonials__masonry">
+        <div className="testimonials__masonry" data-reveal="up">
           <div className="testimonials__masonry-column">
             {testimonialFramedImages.slice(0, 2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} key={src} />)}
           </div>
@@ -176,13 +159,36 @@ export default function Home() {
       </section>
 
       <section className="final-cta section-fixed">
-        <img className="final-cta__desktop-art" src={asset("pronta-para-desktop.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
-        <img className="final-cta__mobile-art" src={asset("final-cta-pronta-responsive.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
+        <div className="final-cta__copy" data-reveal="left">
+          <h2>Pronta para<br />subir ao pódio?</h2>
+          <p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p>
+          <a className="whatsapp-button final-cta__button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a>
+        </div>
+        <img className="final-cta__portrait" src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa com seus troféus" />
       </section>
 
       <footer className="footer">
-        <img className="footer__desktop-art" src={asset("rodape-desktop.webp")} alt="Rodapé com informações de contato, links institucionais e direitos autorais de Maria Lisboa." />
-        <img className="footer__mobile-art" src={asset("rodape-mobile.webp")} alt="© Copyright Maria Lisboa 2026 — Todos os direitos reservados. Desenvolvido por @josielmorais_." />
+        <div className="footer__grid">
+          <div className="footer__brand">
+            <p><span>Sua Técnica no</span><strong>Pódio</strong></p>
+            <small>Mentoria de extensão de cílios com Maria Lisboa.</small>
+          </div>
+          <address className="footer__contact">
+            <strong>Contato</strong>
+            <span>Rua Prefeito Pedro Moreira Borges, 345, 2º piso —<br />Centro, Estiva, MG</span>
+            <a href="tel:+5535997458386">(35) 99745-8386</a>
+            <a href="https://www.instagram.com/marialisboaacademy/" target="_blank" rel="noreferrer">@marialisboaacademy</a>
+          </address>
+          <nav className="footer__links" aria-label="Links institucionais">
+            <strong>Institucional</strong>
+            <a href="#">Termos de uso</a>
+            <a href="#">Política de privacidade</a>
+          </nav>
+        </div>
+        <div className="footer__bottom">
+          <p>© 2026 Maria Lisboa · Mentoria MLC. Todos os direitos reservados.</p>
+          <p>Projeto desenvolvido por <a href="https://www.instagram.com/josielmorais_/" target="_blank" rel="noreferrer">@josielmorais_</a></p>
+        </div>
       </footer>
     </main>
   );
