@@ -171,16 +171,17 @@ a { color: inherit; }
   .manifesto p { font-size: 23px; line-height: 36px; }
   .section-heading { padding-inline: 24px; }
   .section-heading h2, .curriculum .section-heading h2 { font-size: 38px; }
-  .about { height: auto; min-height: 980px; display: flex; flex-direction: column; }
+  .about { height: auto; min-height: 1015px; display: flex; flex-direction: column; }
   .about__word { display: none; }
   .about__portrait { position: relative; width: min(760px, 120vw); height: 720px; left: 50%; top: -130px; transform: translateX(-58%); object-fit: cover; }
-  .about__copy { position: relative; width: calc(100% - 48px); left: auto; top: -180px; margin: 0 auto -130px; padding: 30px; border-radius: 24px; background: rgba(248,246,240,.9); }
+  .about__copy { position: relative; width: calc(100% - 48px); left: auto; top: -145px; margin: 0 auto -95px; padding: 30px; border-radius: 24px; background: rgba(248,246,240,.9); }
   .curriculum { height: auto; padding-bottom: 80px; }
   .curriculum__grid { width: calc(100% - 48px); grid-template-columns: repeat(2, 1fr); }
   .curriculum__item p { font-size: 18px; line-height: 24px; }
   .results { height: auto; padding-bottom: 56px; }
   .results__grid { width: calc(100% - 48px); height: auto; grid-template-columns: repeat(2, 1fr); grid-template-rows: none; gap: 16px; }
   .results__card { aspect-ratio: .61; }
+  .results__card:last-child:nth-child(odd) { width: calc(50% - 8px); grid-column: 1 / -1; justify-self: center; }
   .schedule { height: auto; padding: 60px 24px; }
   .schedule__panel { width: 100%; height: auto; padding: 45px 32px; }
   .schedule__grid { grid-template-columns: 1fr; }
@@ -212,6 +213,7 @@ a { color: inherit; }
   .curriculum__item { min-height: 84px; padding: 18px; }
   .results__grid { width: calc(100% - 32px); margin-top: 70px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
   .results__card { aspect-ratio: 326 / 539; border-radius: 12px; }
+  .results__card:last-child:nth-child(odd) { width: calc(50% - 5px); }
   .schedule__panel { padding: 40px 20px; }
   .difference__card { min-height: 210px; }
   .investment__card { height: auto; padding: 40px 20px; }
@@ -301,6 +303,7 @@ a { color: inherit; }
     height: auto;
     min-height: 0;
     aspect-ratio: 800 / 722;
+    margin-top: -64px;
     background: #f1e9e1;
   }
 
