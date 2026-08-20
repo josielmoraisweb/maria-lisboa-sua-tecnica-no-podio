@@ -46,15 +46,6 @@ const resultImages = [
   "result-figma-09.webp",
 ];
 
-const testimonials = [
-  "f15b0b03-7dd4-4b94-a0bd-8aef8869d846.webp",
-  "ed5711ae-6c3f-48ea-abb1-cade6d458e1c.webp",
-  "e6e18518-f82e-4d27-9fa2-768112f4e577.webp",
-  "42246c63-d4f0-44a8-89bd-e8171204282b.webp",
-  "45f53a95-3be7-40bd-b308-c54fa330abeb.webp",
-  "20646b31-c321-4581-a3b3-9ed75326d82f.webp",
-];
-
 const testimonialFramedImages = [
   "testimonial-framed-01.webp",
   "testimonial-framed-02.webp",
@@ -77,6 +68,19 @@ export default function Home() {
     <main>
       <ScrollReveal />
       <section className="hero" aria-labelledby="hero-title">
+        <h1 className="hero__sr-only" id="hero-title">Sua Técnica no Pódio com Maria Lisboa</h1>
+        <img
+          className="hero__desktop-art"
+          src={asset("hero-desktop-v2.webp")}
+          alt="Sua Técnica no Pódio com Maria Lisboa — imersão presencial com critérios de campeonato."
+        />
+        <a
+          className="hero__desktop-whatsapp"
+          href={whatsapp}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chamar no WhatsApp"
+        />
         <img
           className="hero__mobile-art"
           src={asset("hero-mobile-podio-v2.webp")}
@@ -89,23 +93,6 @@ export default function Home() {
           rel="noreferrer"
           aria-label="Chamar no WhatsApp"
         />
-        <img className="hero__texture" src={asset("2e533292-e11e-49bb-88c7-a836c00a9ac8.webp")} alt="" />
-        <img className="hero__halo hero__halo--left" src={asset("17f0a2e3-b3f4-4190-8f17-5bf4d87e51b3.svg")} alt="" />
-        <img className="hero__portrait" src={asset("9f092faf-9f36-4c5a-8731-0fdcf1d4bf77.webp")} alt="Maria Lisboa" />
-        <div className="hero__photos" aria-hidden="true">
-          <span><img src={asset("261551d3-e865-4f2e-92ad-41a18439ca10.webp")} alt="" /></span>
-          <span><img src={asset("ca73ea98-4dea-4e17-a956-a65ab2293c6c.webp")} alt="" /></span>
-        </div>
-        <img className="hero__light" src={asset("57494273-2463-4204-a167-b63eb9a0d514.webp")} alt="" />
-        <img className="hero__glow hero__glow--top" src={asset("ca8201c1-1042-4ad5-afce-e91ce8001f1d.svg")} alt="" />
-        <img className="hero__glow hero__glow--bottom" src={asset("7e635ac2-ebfd-4035-bad6-5488c746a927.svg")} alt="" />
-        <div className="hero__content">
-          <h1 className="brand-title" id="hero-title"><span>Sua técnica no</span><strong>Pódio</strong></h1>
-          <p className="hero__lead">Eleve o nível da sua técnica com critérios de campeonato aplicados ao seu atendimento comercial. <strong>Aprenda o Método e se destaque!</strong></p>
-          <p className="hero__note">Uma imersão de 1 dia com Maria Lisboa, multicampeã, jurada e mentora, com selo de formação internacional.</p>
-          <ul className="hero__badges" aria-label="Destaques da formação"><li>Método próprio com critérios de campeonato</li><li>Certificação internacional</li></ul>
-          <a className="whatsapp-button whatsapp-button--hero" href={whatsapp} target="_blank" rel="noreferrer">Chamar no WhatsApp</a>
-        </div>
       </section>
 
       <section className="manifesto"><p><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
@@ -155,7 +142,7 @@ export default function Home() {
 
       <section className="testimonials section-fixed">
         <header className="section-heading" data-reveal="up"><h2>O que as alunas <em>enviam</em> depois</h2><p>Mensagens recebidas de alunas que passaram pelas formações e mentorias da Maria Lisboa.</p><span className="line" /></header>
-        <div className="testimonials__grid">{testimonials.map((src, index) => <div className={`testimonial testimonial--${index + 1}`} data-reveal="up" key={src}><img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} /></div>)}</div>
+        <div className="testimonials__grid" data-reveal="up"><img className="testimonials__desktop-art" src={asset("testimonials-desktop-grid.webp")} alt="Mensagens enviadas pelas alunas da Maria Lisboa" /></div>
         <div className="testimonials__masonry">
           <div className="testimonials__masonry-column">
             {testimonialFramedImages.slice(0, 2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} key={src} />)}
@@ -172,8 +159,9 @@ export default function Home() {
       </section>
 
       <section className="final-cta section-fixed">
+        <img className="final-cta__mobile-art" src={asset("final-cta-pronta-responsive.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
         <div className="final-cta__word" aria-hidden="true">MARIA LISBOA</div>
-        <img data-reveal="right" src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa" />
+        <img className="final-cta__portrait" data-reveal="right" src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa" />
         <div className="final-cta__copy" data-reveal="left"><h2>Pronta para<br />subir ao <em>pódio</em>?</h2><p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p><a className="dark-button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a></div>
       </section>
 
