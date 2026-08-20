@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <base href="/link-bio/" />
+  <meta name="theme-color" content="#f8f6f0" />
+  <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
+  <title>Maria Lisboa | Lash Designer & Mentora</title>
+  <style>:root{--cream:#f8f6f0;--scale:1}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream)}
+html{scroll-behavior:smooth}
+body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.stage-shell{position:relative;width:800px;height:3791px;margin:0 auto}
+.site{position:absolute;inset:0 auto auto 0;overflow:hidden;background:var(--cream);transform:scale(var(--scale));transform-origin:top left}
+.site-mobile{display:block;width:800px;height:3791px}
+.site-desktop{display:none;width:1920px;height:2949px}
+.slice{position:absolute;left:0;top:var(--y);width:100%;height:var(--h);overflow:hidden;background:var(--cream)}
+.slice-content{position:absolute;inset:0;overflow:hidden}
+.slice img{position:absolute;left:0;top:calc(-1 * var(--y));display:block;width:100%;height:auto;max-width:none;pointer-events:none;user-select:none}
+.hotspot{position:absolute;z-index:20;left:var(--x);top:var(--y);width:var(--w);height:var(--h);overflow:hidden;border-radius:999px;text-decoration:none;isolation:isolate;transition:transform .22s cubic-bezier(.2,.75,.25,1),filter .22s ease}
+.hotspot::before{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.16);border-radius:inherit;background:linear-gradient(112deg,transparent 18%,rgba(255,255,255,.05) 36%,rgba(255,255,255,.42) 48%,rgba(255,255,255,.06) 60%,transparent 80%);background-size:240% 100%;background-position:140% 0;opacity:0;transition:opacity .2s ease,box-shadow .22s ease}
+.hotspot::after{content:"↗";position:absolute;right:15px;top:50%;color:#fffaf4;font:500 18px/1 Arial,sans-serif;opacity:0;transform:translate(-3px,3px) translateY(-50%);text-shadow:0 2px 8px rgba(43,28,22,.35)}
+.hotspot.button-gold::after{color:#313030;text-shadow:0 2px 8px rgba(255,255,255,.28)}
+.hotspot[href]{cursor:pointer}
+.hotspot:hover,.hotspot:focus-visible{transform:translateY(-3px);filter:drop-shadow(0 9px 9px rgba(63,43,35,.24))}
+.hotspot:hover::before,.hotspot:focus-visible::before{opacity:1;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);animation:button-shine .72s ease-out both}
+.hotspot:hover::after,.hotspot:focus-visible::after{animation:arrow-flight .58s cubic-bezier(.2,.75,.25,1) both}
+.hotspot:focus-visible{outline:4px solid rgba(117,80,68,.55);outline-offset:4px}
+.hotspot:active{transition-duration:.09s}
+.card-effect{position:absolute;z-index:19;left:var(--x);top:var(--y);width:var(--w);height:var(--h);overflow:hidden;border-radius:30px;pointer-events:none;transform-origin:center;isolation:isolate}
+.site-mobile .card-effect.card-pop{background:url('./assets/figma_mobile_exact.webp') calc(-1 * var(--x)) calc(-1 * var(--y))/800px 3791px no-repeat}
+.site-desktop .card-effect.card-pop{background:url('./assets/figma_desktop_exact.webp') calc(-1 * var(--x)) calc(-1 * var(--y))/1920px 2949px no-repeat}
+.card-effect.card-pop{z-index:21;animation:card-click-pop .42s cubic-bezier(.2,.8,.25,1) both;will-change:transform,filter}
+.hotspot.button-visible::before{animation:button-pulse .7s .2s ease-out 1}
+.hotspot.button-visible:hover::before,.hotspot.button-visible:focus-visible::before{animation:button-shine .72s ease-out both}
+.hotspot[aria-disabled='true']{cursor:default}
+.card-link{position:absolute;z-index:18;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border-radius:30px;text-decoration:none;cursor:pointer}
+.card-link:focus-visible{outline:4px solid rgba(117,80,68,.7);outline-offset:5px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.motion-ready .reveal .slice-content{opacity:0;transform:translateY(48px);transition:opacity .72s ease,transform .82s cubic-bezier(.2,.75,.25,1);will-change:opacity,transform}
+.motion-ready .reveal-left .slice-content{transform:translate(-44px,28px)}
+.motion-ready .reveal-right .slice-content{transform:translate(44px,28px)}
+.motion-ready .reveal.is-visible .slice-content{opacity:1;transform:translate(0,0)}
+@keyframes button-shine{0%{background-position:140% 0}100%{background-position:-45% 0}}
+@keyframes arrow-flight{0%{opacity:0;transform:translate(-4px,4px) translateY(-50%)}35%{opacity:1}100%{opacity:0;transform:translate(5px,-5px) translateY(-50%)}}
+@keyframes button-pulse{0%{opacity:0;box-shadow:0 0 0 0 rgba(185,155,136,.34)}35%{opacity:.55}100%{opacity:0;box-shadow:0 0 0 10px rgba(185,155,136,0)}}
+@keyframes card-click-pop{0%{transform:scale(1);filter:drop-shadow(0 3px 4px rgba(63,43,35,.12))}42%{transform:scale(1.022);filter:drop-shadow(0 10px 11px rgba(63,43,35,.22))}72%{transform:scale(1.006);filter:drop-shadow(0 5px 6px rgba(63,43,35,.16))}100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(63,43,35,0))}}
+@media(min-width:901px){.stage-shell{width:1920px;height:2949px}.site-mobile{display:none}.site-desktop{display:block}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready .reveal .slice-content{opacity:1;transform:none;transition:none}.hotspot,.hotspot::before,.hotspot::after,.card-effect{animation:none!important;transition:none!important;transform:none!important}}
+</style>
+</head>
+<body>
+  <div class="stage-shell" id="stage-shell">
+    <main class="site site-mobile" aria-label="Maria Lisboa">
+      <section class="slice reveal" style="--y:0px;--h:783px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:783px;--h:295px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:1078px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:1354px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:1630px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:1906px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:2182px;--h:284px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal" style="--y:2466px;--h:1200px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice" style="--y:3666px;--h:125px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+
+      <div class="card-effect" style="--x:53px;--y:812px;--w:695px;--h:258px" data-card="mentoria-online"></div>
+      <div class="card-effect" style="--x:53px;--y:1092px;--w:695px;--h:257px" data-card="mentoria-ao-vivo"></div>
+      <div class="card-effect" style="--x:53px;--y:1371px;--w:695px;--h:257px" data-card="tecnica-podio"></div>
+      <a class="card-link" style="--x:53px;--y:1371px;--w:695px;--h:257px" data-link="tecnicaPodio" data-card="tecnica-podio" aria-label="Abrir Sua Técnica no Pódio"></a>
+      <div class="card-effect" style="--x:53px;--y:1650px;--w:695px;--h:258px" data-card="curso-iniciante"></div>
+      <div class="card-effect" style="--x:53px;--y:1930px;--w:695px;--h:257px" data-card="palestras"></div>
+      <div class="card-effect" style="--x:53px;--y:2210px;--w:695px;--h:256px" data-card="studio"></div>
+      <a class="hotspot button-gold" style="--x:371px;--y:992px;--w:285px;--h:41px" data-link="mentoriaOnline" data-card="mentoria-online" aria-label="Mentoria Método Lash Campeã — curso on-line"></a>
+      <a class="hotspot" style="--x:118px;--y:1264px;--w:285px;--h:41px" data-link="mentoriaAoVivo" data-card="mentoria-ao-vivo" aria-label="Mentoria Método Lash Campeã — mentoria ao vivo ou presencial"></a>
+      <a class="hotspot" style="--x:340px;--y:1532px;--w:285px;--h:41px" data-link="tecnicaPodio" data-card="tecnica-podio" aria-label="Sua Técnica no Pódio"></a>
+      <a class="hotspot" style="--x:138px;--y:1808px;--w:219px;--h:41px" data-link="cursoIniciante" data-card="curso-iniciante" aria-label="Curso Iniciante"></a>
+      <a class="hotspot" style="--x:365px;--y:2102px;--w:285px;--h:41px" data-link="palestras" data-card="palestras" aria-label="Palestras"></a>
+      <a class="hotspot" style="--x:109px;--y:2377px;--w:242px;--h:41px" data-link="studio" data-card="studio" aria-label="Agende seu horário no studio"></a>
+      <div class="sr-only"><h1>Maria Lisboa</h1><p>Mais de 16 vezes campeã em campeonatos internacionais.</p><h2>Quem sou eu</h2><p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, mentora com selo internacional, jurada e palestrante.</p></div>
+    </main>
+
+    <main class="site site-desktop" aria-label="Maria Lisboa">
+      <section class="slice reveal" style="--y:0px;--h:989px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:989px;--h:298px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:1287px;--h:323px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:1610px;--h:346px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+      <section class="slice reveal" style="--y:1956px;--h:878px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+      <section class="slice" style="--y:2834px;--h:115px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+
+      <div class="card-effect" style="--x:200px;--y:989px;--w:734px;--h:273px" data-card="mentoria-online"></div>
+      <div class="card-effect" style="--x:987px;--y:989px;--w:733px;--h:273px" data-card="mentoria-ao-vivo"></div>
+      <div class="card-effect" style="--x:200px;--y:1313px;--w:734px;--h:272px" data-card="tecnica-podio"></div>
+      <a class="card-link" style="--x:200px;--y:1313px;--w:734px;--h:272px" data-link="tecnicaPodio" data-card="tecnica-podio" aria-label="Abrir Sua Técnica no Pódio"></a>
+      <div class="card-effect" style="--x:987px;--y:1313px;--w:733px;--h:272px" data-card="curso-iniciante"></div>
+      <div class="card-effect" style="--x:200px;--y:1636px;--w:734px;--h:272px" data-card="studio"></div>
+      <div class="card-effect" style="--x:987px;--y:1636px;--w:733px;--h:272px" data-card="palestras"></div>
+      <a class="hotspot button-gold" style="--x:556px;--y:1184px;--w:301px;--h:43px" data-link="mentoriaOnline" data-card="mentoria-online" aria-label="Mentoria Método Lash Campeã — curso on-line"></a>
+      <a class="hotspot" style="--x:1076px;--y:1176px;--w:301px;--h:43px" data-link="mentoriaAoVivo" data-card="mentoria-ao-vivo" aria-label="Mentoria Método Lash Campeã — mentoria ao vivo ou presencial"></a>
+      <a class="hotspot" style="--x:523px;--y:1490px;--w:301px;--h:43px" data-link="tecnicaPodio" data-card="tecnica-podio" aria-label="Sua Técnica no Pódio"></a>
+      <a class="hotspot" style="--x:1096px;--y:1490px;--w:231px;--h:43px" data-link="cursoIniciante" data-card="curso-iniciante" aria-label="Curso Iniciante"></a>
+      <a class="hotspot" style="--x:280px;--y:1830px;--w:255px;--h:43px" data-link="studio" data-card="studio" aria-label="Agende seu horário no studio"></a>
+      <a class="hotspot" style="--x:1335px;--y:1832px;--w:301px;--h:43px" data-link="palestras" data-card="palestras" aria-label="Palestras"></a>
+      <div class="sr-only"><h1>Maria Lisboa</h1><p>Mais de 16 vezes campeã em campeonatos internacionais.</p><h2>Quem sou eu</h2><p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, mentora com selo internacional, jurada e palestrante.</p></div>
+    </main>
+  </div>
+  <script>const links = {
+  mentoriaOnline: "",
+  mentoriaAoVivo: "",
+  tecnicaPodio: "/sua-tecnica-no-podio",
+  cursoIniciante: "",
+  palestras: "",
+  studio: ""
+};
+const MOBILE_BREAKPOINT = 900;
+const MOBILE_DESIGN = { width: 800, height: 3791 };
+const DESKTOP_DESIGN = { width: 1920, height: 2949 };
+const shell = document.getElementById('stage-shell');
+
+function fitArtboard() {
+  const design = window.innerWidth <= MOBILE_BREAKPOINT ? MOBILE_DESIGN : DESKTOP_DESIGN;
+  const scale = Math.min(1, window.innerWidth / design.width);
+  document.documentElement.style.setProperty('--scale', String(scale));
+  shell.style.width = `${design.width * scale}px`;
+  shell.style.height = `${design.height * scale}px`;
+}
+
+fitArtboard();
+window.addEventListener('resize', fitArtboard, { passive: true });
+
+for (const element of document.querySelectorAll('[data-link]')) {
+  const url = links[element.dataset.link]?.trim();
+  if (!url) {
+    element.removeAttribute('href');
+    element.setAttribute('aria-disabled', 'true');
+    element.setAttribute('tabindex', '-1');
+    continue;
+  }
+  element.href = url;
+  if (url.startsWith('/')) {
+    element.target = '_top';
+  } else {
+    element.target = '_blank';
+    element.rel = 'noopener noreferrer';
+  }
+}
+
+const revealTargets = [...document.querySelectorAll('.reveal')];
+const buttonTargets = [...document.querySelectorAll('.hotspot')];
+const interactionTargets = [...document.querySelectorAll('.hotspot, .card-link')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.body.classList.add('motion-ready');
+
+if (!reduceMotion) {
+  for (const target of interactionTargets) {
+    target.addEventListener('pointerdown', () => {
+      const card = target.closest('.site').querySelector(`.card-effect[data-card="${target.dataset.card}"]`);
+      if (!card) return;
+      card.classList.remove('card-pop');
+      void card.offsetWidth;
+      card.classList.add('card-pop');
+    });
+    const card = target.closest('.site').querySelector(`.card-effect[data-card="${target.dataset.card}"]`);
+    card?.addEventListener('animationend', (event) => {
+      if (event.animationName === 'card-click-pop') {
+        card.classList.remove('card-pop');
+      }
+    });
+  }
+}
+
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  revealTargets.forEach((element) => element.classList.add('is-visible'));
+  buttonTargets.forEach((element) => element.classList.add('button-visible'));
+} else {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+  revealTargets.forEach((element) => observer.observe(element));
+
+  const buttonObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('button-visible');
+      buttonObserver.unobserve(entry.target);
+    }
+  }, { threshold: 0.65 });
+  buttonTargets.forEach((element) => buttonObserver.observe(element));
+}
+</script>
+</body>
+</html>
