@@ -159,19 +159,13 @@ export default function Home() {
       </section>
 
       <section className="final-cta section-fixed">
+        <img className="final-cta__desktop-art" src={asset("pronta-para-desktop.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
         <img className="final-cta__mobile-art" src={asset("final-cta-pronta-responsive.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
-        <div className="final-cta__word" aria-hidden="true">MARIA LISBOA</div>
-        <img className="final-cta__portrait" data-reveal="right" src={asset("1c05fdf2-567e-4df3-9cea-76a8eefc5833.webp")} alt="Maria Lisboa" />
-        <div className="final-cta__copy" data-reveal="left"><h2>Pronta para<br />subir ao <em>pódio</em>?</h2><p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p><a className="dark-button" href={whatsapp} target="_blank" rel="noreferrer">Quero garantir minha vaga</a></div>
       </section>
 
       <footer className="footer">
-        <div className="footer__grid" data-reveal="up">
-          <div><div className="footer__brand"><span>Sua técnica no</span><strong>Pódio</strong></div><p>Mentoria de extensão de cílios com Maria Lisboa.</p></div>
-          <div><h2>Contato</h2><address>Rua Prefeito Pedro Moreira Borges, 345, 2º piso — Centro, Estiva, MG<br /><a href="tel:+5535997458386">(35) 99745-8386</a><br /><a href="https://instagram.com/marialisboaacademy" target="_blank" rel="noreferrer">@marialisboaacademy</a></address></div>
-          <div><h2>Institucional</h2><nav><a href="#">Termos de uso</a><a href="#">Política de privacidade</a></nav></div>
-        </div>
-        <div className="footer__bottom"><span>© 2026 Maria Lisboa · Mentoria MLC. Todos os direitos reservados.</span><span>Projeto desenvolvido por @josiemorais_</span></div>
+        <img className="footer__desktop-art" src={asset("rodape-desktop.webp")} alt="Rodapé com informações de contato, links institucionais e direitos autorais de Maria Lisboa." />
+        <img className="footer__mobile-art" src={asset("rodape-mobile.webp")} alt="© Copyright Maria Lisboa 2026 — Todos os direitos reservados. Desenvolvido por @josielmorais_." />
       </footer>
     </main>
   );
