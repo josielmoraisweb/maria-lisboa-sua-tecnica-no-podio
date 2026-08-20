@@ -55,6 +55,15 @@ const testimonials = [
   "20646b31-c321-4581-a3b3-9ed75326d82f.webp",
 ];
 
+const testimonialFramedImages = [
+  "testimonial-framed-01.webp",
+  "testimonial-framed-02.webp",
+  "testimonial-framed-03.webp",
+  "testimonial-framed-04.webp",
+  "testimonial-framed-05.webp",
+  "testimonial-framed-06.webp",
+];
+
 const differenceCards = [
   ["Acompanhamento exclusivo", "Suporte direto com a mentora durante todo o processo.", "27254970-adae-41ff-9961-f17443b7539d.svg"],
   ["Método validado", "Testado e validado em campeonatos internacionais, já levou mais de 25 alunas ao pódio.", "b3456067-52d2-48cf-9359-e306b7203a8e.svg"],
@@ -99,7 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="manifesto"><p data-reveal="up"><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
+      <section className="manifesto"><p><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
 
       <section className="about section-fixed">
         <div className="about__word" aria-hidden="true">MARIA LISBOA</div>
@@ -147,6 +156,14 @@ export default function Home() {
       <section className="testimonials section-fixed">
         <header className="section-heading" data-reveal="up"><h2>O que as alunas <em>enviam</em> depois</h2><p>Mensagens recebidas de alunas que passaram pelas formações e mentorias da Maria Lisboa.</p><span className="line" /></header>
         <div className="testimonials__grid">{testimonials.map((src, index) => <div className={`testimonial testimonial--${index + 1}`} data-reveal="up" key={src}><img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} /></div>)}</div>
+        <div className="testimonials__masonry">
+          <div className="testimonials__masonry-column">
+            {testimonialFramedImages.slice(0, 2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} key={src} />)}
+          </div>
+          <div className="testimonials__masonry-column">
+            {testimonialFramedImages.slice(2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 3}`} key={src} />)}
+          </div>
+        </div>
       </section>
 
       <section className="investment section-fixed">
