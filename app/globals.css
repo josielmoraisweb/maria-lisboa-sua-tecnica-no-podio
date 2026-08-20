@@ -82,6 +82,7 @@ a { color: inherit; }
 .section-heading .line { margin-top: 28px; }
 
 .about { height: 675px; background: #f1e9e1; }
+.about__mobile-art { display: none; }
 .about__word { position: absolute; left: calc(50% - 675px); top: 52px; color: #221a17; opacity: .055; font-family: "Cormorant Garamond", serif; font-size: 226px; font-weight: 600; line-height: .86; letter-spacing: -9px; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; }
 .about__portrait { position: absolute; width: 856px; height: 1284px; left: calc(50% - 735px); top: -242px; object-fit: cover; }
 .about__copy { position: absolute; width: 556px; left: calc(50% - 51px); top: 129px; }
@@ -224,6 +225,28 @@ a { color: inherit; }
 
 /* Hero criada no Figma para celular, tablet e iPad. A versão desktop permanece intacta. */
 @media (max-width: 1024px) {
+  .about {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: block;
+    background: #f1e9e1;
+  }
+
+  .about__mobile-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 800 / 1770;
+    object-fit: cover;
+  }
+
+  .about__word,
+  .about__portrait,
+  .about__copy {
+    display: none;
+  }
+
   .hero {
     width: 100%;
     height: auto;

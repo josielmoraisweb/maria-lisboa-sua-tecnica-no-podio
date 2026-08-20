@@ -98,6 +98,11 @@ export default function Home() {
       <section className="manifesto"><p><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
 
       <section className="about section-fixed">
+        <img
+          className="about__mobile-art"
+          src={asset("quem-sou-eu-mobile-tablet.webp")}
+          alt="Quem sou eu? Maria Lisboa, referência em extensão de cílios, mentora, jurada e palestrante."
+        />
         <div className="about__word" aria-hidden="true">MARIA LISBOA</div>
         <img className="about__portrait" data-reveal="left" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.webp")} alt="Maria Lisboa" />
         <div className="about__copy" data-reveal="right">
