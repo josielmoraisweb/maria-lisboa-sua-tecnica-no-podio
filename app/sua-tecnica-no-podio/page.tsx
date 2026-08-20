@@ -91,6 +91,10 @@ export default function Home() {
           <img className="hero__light" src={asset("hero-luz.webp")} alt="" />
           <img className="hero__glow hero__glow--top" src={asset("hero-glow-top.svg")} alt="" />
           <img className="hero__glow hero__glow--bottom" src={asset("hero-glow-bottom.svg")} alt="" />
+          <span className="hero__mobile-effect hero__mobile-effect--halo"><img src={asset("hero-mobile-halo.svg")} alt="" /></span>
+          <span className="hero__mobile-effect hero__mobile-effect--glow-top"><img src={asset("hero-mobile-glow-top.svg")} alt="" /></span>
+          <span className="hero__mobile-effect hero__mobile-effect--glow-bottom"><img src={asset("hero-mobile-glow-bottom.svg")} alt="" /></span>
+          <span className="hero__mobile-effect hero__mobile-effect--bottom-light"><img src={asset("hero-mobile-bottom-light.svg")} alt="" /></span>
         </div>
         <div className="hero__content" data-reveal="left">
           <img className="hero__mobile-logo" src={asset("hero-mobile-logo.svg")} alt="" aria-hidden="true" />

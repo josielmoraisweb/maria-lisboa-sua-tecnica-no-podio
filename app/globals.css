@@ -400,6 +400,7 @@ a { color: inherit; }
 .hero__glow--bottom { width: 1246px; height: 500px; left: calc(50% - 316px); top: 722px; }
 .hero__content { top: 248px; }
 .hero__mobile-logo { display: none; }
+.hero__mobile-effect { display: none; }
 .brand-title { height: auto; margin-bottom: 28px; }
 .hero__badges { margin-top: 28px; }
 .whatsapp-button { transition: transform .2s ease, filter .2s ease; }
@@ -608,13 +609,8 @@ a { color: inherit; }
     opacity: .37;
   }
 
-  .hero__halo--left {
-    display: block;
-    width: 106.125%;
-    height: 78.157%;
-    left: 9.5%;
-    top: 2.73%;
-  }
+  .hero__halo,
+  .hero__glow { display: none; }
 
   .hero__portrait {
     display: block;
@@ -664,20 +660,80 @@ a { color: inherit; }
     top: -339.932%;
   }
 
-  .hero__glow--top {
+  .hero__mobile-effect {
     display: block;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .hero__mobile-effect img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+
+  .hero__mobile-effect--halo {
+    z-index: 1;
+    width: 106.125%;
+    height: 78.157%;
+    left: 9.5%;
+    top: 2.73%;
+  }
+
+  .hero__mobile-effect--halo img {
+    width: 190.956%;
+    height: 184.303%;
+    left: -45.48%;
+    top: -42.15%;
+  }
+
+  .hero__mobile-effect--glow-top {
+    z-index: 4;
     width: 76.375%;
     height: 52.133%;
     left: 173.625%;
     top: -29.01%;
+    mix-blend-mode: screen;
   }
 
-  .hero__glow--bottom {
-    display: block;
+  .hero__mobile-effect--glow-top img {
+    width: 180.098%;
+    height: 180.098%;
+    left: -40.05%;
+    top: -40.05%;
+  }
+
+  .hero__mobile-effect--glow-bottom {
+    z-index: 4;
     width: 155.75%;
     height: 42.662%;
     left: 80.5%;
     top: 61.604%;
+    mix-blend-mode: screen;
+  }
+
+  .hero__mobile-effect--glow-bottom img {
+    width: 139.278%;
+    height: 197.88%;
+    left: -19.64%;
+    top: -48.94%;
+  }
+
+  .hero__mobile-effect--bottom-light {
+    z-index: 4;
+    width: 163.375%;
+    height: 63.481%;
+    left: -34%;
+    top: 49.147%;
+  }
+
+  .hero__mobile-effect--bottom-light img {
+    width: 116.343%;
+    height: 128.7%;
+    left: -8.17%;
+    top: -14.35%;
   }
 
   .hero__content {
@@ -771,4 +827,19 @@ a { color: inherit; }
     font-size: 4.171vw;
     line-height: 3.921vw;
   }
+
+  .footer { overflow: hidden; }
+  .footer__grid {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+  .footer__brand small,
+  .footer__contact,
+  .footer__contact > strong,
+  .footer__contact span,
+  .footer__contact a,
+  .footer__links,
+  .footer__links > strong,
+  .footer__links a { width: 100%; }
 }
