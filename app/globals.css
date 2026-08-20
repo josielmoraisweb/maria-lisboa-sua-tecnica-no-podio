@@ -94,23 +94,13 @@ a { color: inherit; }
 .curriculum__item img { display: block; width: 100%; height: 100%; }
 .curriculum__item p { margin: 0; color: #302019; font-family: "Jost", sans-serif; font-size: 22px; line-height: 28.7px; font-weight: 500; }
 
-.results { height: 2087px; padding-top: 112px; background: linear-gradient(180deg,#f7f1ea 0,#f8f6f0 16%,#f8f6f0 86%,#efe5dc 100%); }
+.results { height: 2025px; padding-top: 112px; background: linear-gradient(180deg,#f7f1ea 0,#f8f6f0 16%,#f8f6f0 86%,#efe5dc 100%); }
 .results::before { content: ""; position: absolute; top: 15px; left: 0; right: 0; height: 256px; background: linear-gradient(172deg,#f5efe6,#ebdbcd 55%,#e1ccbf); filter: blur(64px); opacity: .4; }
 .results .section-heading { position: relative; z-index: 1; }
 .results__grid { position: relative; z-index: 1; width: 1012px; height: 1686px; margin: 106px auto 0; display: grid; grid-template-columns: repeat(3, 326px); grid-template-rows: repeat(3, 539px); gap: 34px 17px; }
 .results__card { position: relative; overflow: hidden; border-radius: 28px; background: #fff; }
-.results__card > img:first-child { width: 100%; height: 100%; object-fit: cover; }
-.results__card--1 > img:first-child { width: 115%; transform: rotate(180deg); }
-.results__card--2 > img:first-child { object-position: 70% center; }
-.results__card--3 > img:first-child { width: 108%; transform: translateX(-4%); }
-.results__card--4 > img:first-child { height: 108%; transform: translateY(-6%); }
-.results__card--6 > img:first-child { width: 124%; transform: translateX(-18%); }
-.results__card--7 > img:first-child { width: 132%; transform: translateX(-16%); }
-.results__card--8 > img:first-child { width: 109%; transform: translateX(-8%); }
-.results__card--9 > img:first-child { width: 115%; transform: translateX(-15%) rotate(180deg); }
-.results__overlay { position: absolute; width: 200% !important; height: 161% !important; left: -50%; top: -31%; object-fit: cover; }
-.outline-button, .dark-button { display: inline-flex; align-items: center; justify-content: center; height: 53px; padding: 0 32px; border-radius: 999px; color: #302019; text-decoration: none; text-transform: uppercase; font-family: "Jost", sans-serif; font-size: 12.48px; line-height: 19px; font-weight: 500; letter-spacing: 2.75px; }
-.outline-button { position: absolute; left: 50%; bottom: 99px; transform: translateX(-50%); border: 1px solid rgba(48,32,25,.25); }
+.results__card > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.dark-button { display: inline-flex; align-items: center; justify-content: center; height: 53px; padding: 0 32px; border-radius: 999px; color: #302019; text-decoration: none; text-transform: uppercase; font-family: "Jost", sans-serif; font-size: 12.48px; line-height: 19px; font-weight: 500; letter-spacing: 2.75px; }
 
 .schedule { height: 791px; padding-top: 80px; background: #f1e9e1; }
 .schedule__panel { width: 1088px; height: 605px; margin: 0 auto; padding: 45px 48px 80px; border-radius: 32px; background: #8a8282; box-shadow: 0 26px 60px -28px rgba(48,32,25,.38); }
@@ -195,10 +185,9 @@ a { color: inherit; }
   .curriculum { height: auto; padding-bottom: 80px; }
   .curriculum__grid { width: calc(100% - 48px); grid-template-columns: repeat(2, 1fr); }
   .curriculum__item p { font-size: 18px; line-height: 24px; }
-  .results { height: auto; padding-bottom: 150px; }
+  .results { height: auto; padding-bottom: 56px; }
   .results__grid { width: calc(100% - 48px); height: auto; grid-template-columns: repeat(2, 1fr); grid-template-rows: none; gap: 16px; }
   .results__card { aspect-ratio: .61; }
-  .outline-button { bottom: 60px; }
   .schedule { height: auto; padding: 60px 24px; }
   .schedule__panel { width: 100%; height: auto; padding: 45px 32px; }
   .schedule__grid { grid-template-columns: 1fr; }
@@ -233,10 +222,10 @@ a { color: inherit; }
   .whatsapp-button--hero { width: 100%; max-width: 350px; font-size: 18px; }
   .section-heading h2, .curriculum .section-heading h2 { font-size: 32px; line-height: 1.12; }
   .section-heading p, .curriculum .section-heading p { font-size: 16px; line-height: 24px; }
-  .curriculum__grid, .results__grid, .difference__grid, .testimonials__grid { grid-template-columns: 1fr; }
+  .curriculum__grid, .difference__grid, .testimonials__grid { grid-template-columns: 1fr; }
   .curriculum__item { min-height: 84px; padding: 18px; }
-  .results__grid { margin-top: 70px; }
-  .results__card { aspect-ratio: .73; }
+  .results__grid { width: calc(100% - 32px); margin-top: 70px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; }
+  .results__card { aspect-ratio: 326 / 539; border-radius: 12px; }
   .schedule__panel { padding: 40px 20px; }
   .difference__card { min-height: 210px; }
   .investment__card { height: auto; padding: 40px 20px; }
