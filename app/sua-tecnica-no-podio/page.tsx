@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const asset = (name: string) => `/assets/${name}`;
-const whatsapp = "https://wa.me/5535997458386";
+const whatsapp = "https://api.whatsapp.com/send?phone=5535997458386&text=Ol%C3%A1%2C%20Maria%20Lisboa!%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20curso%20*SUA%20T%C3%89CNICA%20NO%20P%C3%93DIO*";
 
 const curriculum = [
   ["Clássico Fio a Fio", "a826c316-12df-4115-ac6d-f2b6f617ee02.svg"],
@@ -58,15 +58,6 @@ const resultImages = [
   "result-figma-09.webp",
 ];
 
-const testimonialFramedImages = [
-  "testimonial-framed-01.webp",
-  "testimonial-framed-02.webp",
-  "testimonial-framed-03.webp",
-  "testimonial-framed-04.webp",
-  "testimonial-framed-05.webp",
-  "testimonial-framed-06.webp",
-];
-
 const testimonialMobileImages = [
   "testimonial-mobile-01.webp",
   "testimonial-mobile-02.webp",
@@ -74,6 +65,15 @@ const testimonialMobileImages = [
   "testimonial-mobile-04.webp",
   "testimonial-mobile-05.webp",
   "testimonial-mobile-06.webp",
+];
+
+const testimonialDesktopImages = [
+  "testimonial-mobile-01.webp",
+  "testimonial-mobile-02.webp",
+  "testimonial-mobile-03.webp",
+  "testimonial-mobile-06.webp",
+  "testimonial-mobile-04.webp",
+  "testimonial-mobile-05.webp",
 ];
 
 const differenceCards = [
@@ -91,6 +91,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <img className="hero__mobile-art" src={asset("hero-mobile-podio-v2.webp")} alt="" aria-hidden="true" />
         <a className="hero__mobile-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp" />
+        <img className="hero__desktop-logo" src={asset("hero-logo-desktop.svg")} alt="" aria-hidden="true" />
         <div className="hero__visual" aria-hidden="true">
           <img className="hero__texture" src={asset("hero-textura.webp")} alt="" />
           <img className="hero__halo hero__halo--left" src={asset("hero-halo.svg")} alt="" />
@@ -109,7 +110,7 @@ export default function Home() {
         </div>
         <div className="hero__content" data-reveal="left">
           <img className="hero__mobile-logo" src={asset("hero-mobile-logo.svg")} alt="" aria-hidden="true" />
-          <h1 className="brand-title" id="hero-title" aria-label="Sua Técnica no Pódio com Maria Lisboa"><span>Sua Técnica no</span><strong>Pódio</strong></h1>
+          <h1 className="hero__sr-only" id="hero-title">Sua Técnica no Pódio com Maria Lisboa</h1>
           <p className="hero__lead">Eleve o nível da sua técnica com critérios de campeonato aplicados ao seu atendimento comercial. <strong>Aprenda o método e se destaque!</strong></p>
           <p className="hero__note">Uma imersão de 1 dia com Maria Lisboa, multicampeã, jurada e mentora, com selo de formação internacional.</p>
           <ul className="hero__badges"><li>Método próprio com critérios de campeonato</li><li>Certificação internacional</li></ul>
@@ -169,13 +170,12 @@ export default function Home() {
 
       <section className="testimonials section-fixed">
         <header className="section-heading" data-reveal="up"><h2>O que as alunas <em>enviam</em> depois</h2><p>Mensagens recebidas de alunas que passaram pelas formações e mentorias da Maria Lisboa.</p><span className="line" /></header>
-        <div className="testimonials__masonry" data-reveal="up">
-          <div className="testimonials__masonry-column">
-            {testimonialFramedImages.slice(0, 2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} key={src} />)}
-          </div>
-          <div className="testimonials__masonry-column">
-            {testimonialFramedImages.slice(2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 3}`} key={src} />)}
-          </div>
+        <div className="testimonials__desktop-frame" data-reveal="up">
+          {testimonialDesktopImages.map((src, index) => (
+            <div className={`testimonials__desktop-card testimonials__desktop-card--${index + 1}`} key={src}>
+              <img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} />
+            </div>
+          ))}
         </div>
         <div className="testimonials__mobile-frame" data-reveal="up">
           {testimonialMobileImages.map((src, index) => (
@@ -193,6 +193,7 @@ export default function Home() {
 
       <section className="final-cta section-fixed">
         <img className="final-cta__mobile-art" src={asset("final-cta-pronta-responsive.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
+        <div className="final-cta__word" aria-hidden="true"><span>MARIA LISBOA</span></div>
         <div className="final-cta__copy" data-reveal="left">
           <h2>Pronta para<br />subir ao pódio?</h2>
           <p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p>
