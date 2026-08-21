@@ -67,6 +67,15 @@ const testimonialFramedImages = [
   "testimonial-framed-06.webp",
 ];
 
+const testimonialMobileImages = [
+  "testimonial-mobile-01.webp",
+  "testimonial-mobile-02.webp",
+  "testimonial-mobile-03.webp",
+  "testimonial-mobile-04.webp",
+  "testimonial-mobile-05.webp",
+  "testimonial-mobile-06.webp",
+];
+
 const differenceCards = [
   ["Acompanhamento exclusivo", "Suporte direto com a mentora durante todo o processo.", "27254970-adae-41ff-9961-f17443b7539d.svg"],
   ["Método validado", "Testado e validado em campeonatos internacionais, já levou mais de 25 alunas ao pódio.", "b3456067-52d2-48cf-9359-e306b7203a8e.svg"],
@@ -80,6 +89,8 @@ export default function Home() {
     <main>
       <ScrollReveal />
       <section className="hero" aria-labelledby="hero-title">
+        <img className="hero__mobile-art" src={asset("hero-mobile-podio-v2.webp")} alt="" aria-hidden="true" />
+        <a className="hero__mobile-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chamar no WhatsApp" />
         <div className="hero__visual" aria-hidden="true">
           <img className="hero__texture" src={asset("hero-textura.webp")} alt="" />
           <img className="hero__halo hero__halo--left" src={asset("hero-halo.svg")} alt="" />
@@ -109,6 +120,11 @@ export default function Home() {
       <section className="manifesto"><p><strong>Acredito que excelência técnica, constância e amor pelo que fazemos são o que nos levam além.</strong> E é exatamente esse conhecimento que quero compartilhar com você nesta mentoria.</p></section>
 
       <section className="about section-fixed">
+        <img
+          className="about__mobile-art"
+          src={asset("quem-sou-eu-mobile-tablet.webp")}
+          alt="Quem sou eu? Maria Lisboa, referência em extensão de cílios, mentora, jurada e palestrante."
+        />
         <div className="about__word" aria-hidden="true">MARIA LISBOA</div>
         <img className="about__portrait" data-reveal="left" src={asset("d3032cbc-8863-4eb7-a257-0e28b04c64f7.webp")} alt="Maria Lisboa" />
         <div className="about__copy" data-reveal="right">
@@ -161,6 +177,13 @@ export default function Home() {
             {testimonialFramedImages.slice(2).map((src, index) => <img src={asset(src)} alt={`Depoimento de aluna ${index + 3}`} key={src} />)}
           </div>
         </div>
+        <div className="testimonials__mobile-frame" data-reveal="up">
+          {testimonialMobileImages.map((src, index) => (
+            <div className={`testimonials__mobile-card testimonials__mobile-card--${index + 1}`} key={src}>
+              <img src={asset(src)} alt={`Depoimento de aluna ${index + 1}`} />
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="investment section-fixed">
@@ -169,6 +192,7 @@ export default function Home() {
       </section>
 
       <section className="final-cta section-fixed">
+        <img className="final-cta__mobile-art" src={asset("final-cta-pronta-responsive.webp")} alt="Pronta para subir ao pódio? Garanta sua vaga na formação presencial." />
         <div className="final-cta__copy" data-reveal="left">
           <h2>Pronta para<br />subir ao pódio?</h2>
           <p>Garanta sua vaga na formação presencial e leve a sua técnica ao padrão de campeonato, com acompanhamento direto da mentora.</p>
@@ -177,6 +201,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
+        <img className="footer__mobile-art" src={asset("rodape-mobile.webp")} alt="© Copyright Maria Lisboa 2026 — Todos os direitos reservados. Desenvolvido por @josielmorais_." />
         <div className="footer__grid">
           <div className="footer__brand">
             <img src={asset("logo-sua-tecnica-podio.svg")} alt="Sua Técnica no Pódio" />
