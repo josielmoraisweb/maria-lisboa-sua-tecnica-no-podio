@@ -903,6 +903,16 @@ a { color: inherit; }
   .about__portrait,
   .about__copy { display: none; }
 
+  .curriculum {
+    height: auto;
+    padding-bottom: 56px;
+  }
+
+  .results {
+    height: auto;
+    padding-top: 80px;
+  }
+
   .testimonials {
     height: auto;
     padding: 60px 0 80px;
