@@ -48,6 +48,25 @@ test("makes the complete Sua Técnica no Pódio card navigate in the same tab", 
   assert.match(html, /element\.target = '_top'/);
 });
 
+test("includes the configured contact links in every responsive layout", async () => {
+  const html = await readFile(
+    new URL("../public/link-bio/index.html", import.meta.url),
+    "utf8",
+  );
+
+  for (const key of [
+    "mentoriaOnline",
+    "mentoriaAoVivo",
+    "cursoIniciante",
+    "palestras",
+    "studio",
+  ]) {
+    const occurrences = html.match(new RegExp(`data-link="${key}"`, "g"));
+    assert.equal(occurrences?.length, 2, `expected ${key} in mobile and desktop layouts`);
+    assert.match(html, new RegExp(`${key}:\\s*"https://`));
+  }
+});
+
 test("renders the landing page at its new route", async () => {
   const response = await render("/sua-tecnica-no-podio");
   assert.equal(response.status, 200);
