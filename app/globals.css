@@ -16,6 +16,7 @@ a { color: inherit; }
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, translate;
 }
+
 .reveal-enabled [data-reveal="up"] { translate: 0 44px; }
 .reveal-enabled [data-reveal="left"] { translate: -52px 0; }
 .reveal-enabled [data-reveal="right"] { translate: 52px 0; }
@@ -347,6 +348,231 @@ a { color: inherit; }
     height: auto;
     aspect-ratio: 800 / 125;
     object-fit: cover;
+  }
+}
+
+/* Frames desktop finais do Figma. Celular e tablet continuam no bloco acima. */
+.hero__desktop-logo,
+.testimonials__desktop-frame,
+.final-cta__word { display: none; }
+
+@media (min-width: 1025px) {
+  .hero {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1920 / 846;
+    background: #b9a6a4;
+  }
+
+  .hero::before { display: none; }
+  .hero__visual { display: block; position: absolute; inset: 0; }
+  .hero__texture {
+    display: block;
+    width: 107.708vw;
+    height: 191.406vw;
+    left: calc(50% - 51.458vw);
+    top: -57.396vw;
+    opacity: .37;
+    object-fit: cover;
+  }
+  .hero__halo--left {
+    display: block;
+    width: 84.438vw;
+    height: 87.928vw;
+    left: -16.146vw;
+    top: -18.438vw;
+  }
+  .hero__portrait {
+    display: block;
+    width: 34.531vw;
+    height: 47.76vw;
+    left: calc(50% - 4.792vw);
+    top: 1.875vw;
+    object-fit: fill;
+  }
+  .hero__photos {
+    display: grid;
+    z-index: 3;
+    left: calc(50% + 19.74vw);
+    top: 6.094vw;
+    gap: .938vw;
+  }
+  .hero__photos span {
+    position: relative;
+    width: 12.464vw;
+    height: 12.464vw;
+    overflow: hidden;
+    border-radius: .927vw;
+    box-shadow: none;
+    transform: rotate(180deg) scaleY(-1);
+  }
+  .hero__photos span:first-child img {
+    position: absolute;
+    width: 263.58%;
+    height: 351.61%;
+    left: -81.85%;
+    top: -111.2%;
+    max-width: none;
+    transform: none;
+    object-fit: fill;
+  }
+  .hero__photos span:last-child img {
+    position: absolute;
+    width: 135.02%;
+    height: 180.11%;
+    left: -24.1%;
+    top: -46.21%;
+    max-width: none;
+    transform: none;
+    object-fit: fill;
+  }
+  .hero__light {
+    display: block;
+    width: 336.694vw;
+    height: 224.407vw;
+    left: calc(50% - 168.347vw);
+    top: -90.625vw;
+    transform: rotate(-132.87deg);
+    opacity: 1;
+    mix-blend-mode: plus-lighter;
+  }
+  .hero__glow--top {
+    display: block;
+    width: 57.313vw;
+    height: 57.313vw;
+    left: calc(50% + 22.344vw);
+    top: -30.469vw;
+  }
+  .hero__glow--bottom {
+    display: block;
+    width: 90.365vw;
+    height: 51.563vw;
+    left: calc(50% - 29.167vw);
+    top: 24.844vw;
+  }
+  .hero__desktop-logo {
+    display: block;
+    position: absolute;
+    z-index: 6;
+    width: 11.108vw;
+    height: 4.468vw;
+    left: calc(50% - 31.706vw);
+    top: 12.957vw;
+  }
+  .hero__content {
+    display: block;
+    z-index: 6;
+    width: 30.661vw;
+    left: calc(50% - 31.771vw);
+    top: 19.01vw;
+  }
+  .hero__lead,
+  .hero__note {
+    width: 30.661vw;
+    font-size: 1.168vw;
+    line-height: 1.458vw;
+  }
+  .hero__note { margin-top: 1.458vw; line-height: 1.406vw; }
+  .hero__badges { gap: .729vw; margin-top: 1.458vw; }
+  .hero__badges li {
+    padding: .467vw .934vw;
+    border-width: .058vw;
+    font-size: .701vw;
+    line-height: .934vw;
+    letter-spacing: .018vw;
+  }
+  .whatsapp-button--hero {
+    width: 18.245vw;
+    height: 3.096vw;
+    margin-top: 1.302vw;
+    font-size: 1.101vw;
+    line-height: 1.035vw;
+  }
+
+  .testimonials { height: 1200px; padding: 37px 0 68px; }
+  .testimonials > .section-heading { padding-top: 34px; }
+  .testimonials__masonry { display: none; }
+  .testimonials__desktop-frame {
+    display: block;
+    position: relative;
+    width: 1009px;
+    height: 828px;
+    margin: 48px auto 0;
+  }
+  .testimonials__desktop-card { position: absolute; overflow: hidden; }
+  .testimonials__desktop-card img {
+    position: absolute;
+    display: block;
+    max-width: none;
+  }
+  .testimonials__desktop-card--1 { left: 9.628px; top: 9.628px; width: 279.225px; height: 570.968px; }
+  .testimonials__desktop-card--1 img { left: -6.43%; top: -11.18%; width: 134.64%; height: 116.28%; }
+  .testimonials__desktop-card--2 { left: 309.072px; top: 9.628px; width: 315.258px; height: 570.968px; }
+  .testimonials__desktop-card--2 img { left: -5.11%; top: -17.3%; width: 131.11%; height: 157.06%; }
+  .testimonials__desktop-card--3 { left: 634.921px; top: 9.628px; width: 348.077px; height: 570.968px; }
+  .testimonials__desktop-card--3 img { left: -13.38%; top: 0; width: 128.96%; height: 106.42%; }
+  .testimonials__desktop-card--4 { left: 3px; top: 616px; width: 338px; height: 212px; }
+  .testimonials__desktop-card--4 img { left: -6.22%; top: -4.58%; width: 117.1%; height: 120.32%; }
+  .testimonials__desktop-card--5 { left: 351px; top: 616px; width: 325.724px; height: 212px; }
+  .testimonials__desktop-card--5 img { left: -13.22%; top: -13.8%; width: 126.03%; height: 127.91%; }
+  .testimonials__desktop-card--6 { left: 686.724px; top: 685px; width: 322px; height: 143px; }
+  .testimonials__desktop-card--6 img { left: -5.94%; top: -296.41%; width: 134.47%; height: 656.41%; }
+
+  .final-cta {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1920 / 675;
+    overflow: hidden;
+    background: #f1e9e1;
+  }
+  .final-cta::before { display: none; }
+  .final-cta__word {
+    display: flex;
+    position: absolute;
+    z-index: 0;
+    left: 56.823%;
+    top: -11.407%;
+    width: 24.854%;
+    height: 471.945%;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .final-cta__word span {
+    display: block;
+    flex: none;
+    width: 667.568%;
+    height: 15%;
+    color: #221a17;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27.501vw;
+    font-weight: 300;
+    line-height: .9;
+    white-space: nowrap;
+    transform: rotate(90deg);
+  }
+  .final-cta__copy {
+    z-index: 3;
+    width: 500px;
+    left: calc(50% - 580px);
+    top: 100px;
+  }
+  .final-cta__copy h2 {
+    font-size: 60px;
+    line-height: 63px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+  }
+  .final-cta__copy p { width: 402px; margin-top: 24px; font-size: 20px; line-height: 26px; }
+  .final-cta__portrait {
+    z-index: 2;
+    width: 964px;
+    height: 1352px;
+    left: calc(50% - 216px);
+    top: -387px;
+    object-fit: fill;
   }
 }
 
@@ -998,4 +1224,46 @@ a { color: inherit; }
     aspect-ratio: 800 / 125;
     object-fit: cover;
   }
+}
+
+/* Desktop final — deve permanecer no fim do arquivo. */
+@media (min-width: 1025px) {
+  .hero { width: 100%; height: auto; min-height: 0; aspect-ratio: 1920 / 846; background: #b9a6a4; }
+  .hero::before { display: none; }
+  .hero__visual { display: block; position: absolute; inset: 0; }
+  .hero__texture { display: block; width: 107.708vw; height: 191.406vw; left: calc(50% - 51.458vw); top: -57.396vw; opacity: .37; object-fit: cover; }
+  .hero__halo--left { display: block; width: 84.438vw; height: 87.928vw; left: -16.146vw; top: -18.438vw; }
+  .hero__portrait { display: block; width: 34.531vw; height: 47.76vw; left: calc(50% - 4.792vw); top: 1.875vw; object-fit: fill; object-position: center; }
+  .hero__photos { display: grid; z-index: 3; left: calc(50% + 19.74vw); right: auto; top: 6.094vw; gap: .938vw; }
+  .hero__photos span { position: relative; width: 12.464vw; height: 12.464vw; overflow: hidden; border-radius: .927vw; box-shadow: none; transform: rotate(180deg) scaleY(-1); }
+  .hero__photos span:first-child img { position: absolute; width: 263.58%; height: 351.61%; left: -81.85%; top: -111.2%; max-width: none; transform: none; object-fit: fill; object-position: center; }
+  .hero__photos span:last-child img { position: absolute; width: 135.02%; height: 180.11%; left: -24.1%; top: -46.21%; max-width: none; transform: none; object-fit: fill; object-position: center; }
+  .hero__light { display: block; width: 336.694vw; height: 224.407vw; left: calc(50% - 168.347vw); top: -90.625vw; transform: rotate(-132.87deg); opacity: 1; mix-blend-mode: plus-lighter; }
+  .hero__glow--top { display: block; width: 57.313vw; height: 57.313vw; left: calc(50% + 22.344vw); top: -30.469vw; }
+  .hero__glow--bottom { display: block; width: 90.365vw; height: 51.563vw; left: calc(50% - 29.167vw); top: 24.844vw; }
+  .hero__desktop-logo { display: block; position: absolute; z-index: 6; width: 11.108vw; height: 4.468vw; left: calc(50% - 31.706vw); top: 12.957vw; }
+  .hero__content { display: block; z-index: 6; width: 30.661vw; left: calc(50% - 31.771vw); top: 19.01vw; padding: 0; border-radius: 0; background: none; box-shadow: none; }
+  .hero__lead, .hero__note { width: 30.661vw; font-size: 1.168vw; line-height: 1.458vw; }
+  .hero__note { margin-top: 1.458vw; line-height: 1.406vw; }
+  .hero__badges { gap: .729vw; margin-top: 1.458vw; }
+  .hero__badges li { width: auto; padding: .467vw .934vw; border-width: .058vw; font-size: .701vw; line-height: .934vw; letter-spacing: .018vw; }
+  .whatsapp-button--hero { position: static; width: 18.245vw; max-width: none; height: 3.096vw; margin-top: 1.302vw; font-size: 1.101vw; line-height: 1.035vw; }
+
+  .final-cta { width: 100%; height: auto; min-height: 0; aspect-ratio: 1920 / 675; overflow: hidden; background: #f1e9e1; }
+  .final-cta::before {
+    display: block;
+    width: 720px;
+    height: 145px;
+    right: -40px;
+    top: 88px;
+    background: #211715;
+    transform: rotate(-17deg);
+    clip-path: polygon(0 50%, 100% 0, 96% 26%, 10% 70%, 100% 100%, 100% 82%);
+  }
+  .final-cta__word { display: none; }
+  .final-cta__word span { display: block; flex: none; width: 667.568%; height: 15%; color: #221a17; font-family: "Cormorant Garamond", serif; font-size: 27.501vw; font-weight: 300; line-height: .9; white-space: nowrap; transform: rotate(90deg); }
+  .final-cta__copy { z-index: 3; width: 500px; left: calc(50% - 580px); top: 100px; }
+  .final-cta__copy h2 { margin: 0; font-size: 60px; line-height: 63px; font-weight: 600; font-style: italic; letter-spacing: -.6px; }
+  .final-cta__copy p { width: 402px; margin: 24px 0 0; font-size: 20px; line-height: 26px; }
+  .final-cta__portrait { z-index: 2; width: 964px; height: 1352px; left: calc(50% - 216px); right: auto; top: -387px; bottom: auto; object-fit: fill; object-position: center; }
 }
