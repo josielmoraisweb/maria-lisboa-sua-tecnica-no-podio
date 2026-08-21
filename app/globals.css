@@ -418,6 +418,7 @@ a { color: inherit; }
 }
 .testimonials__masonry-column { display: flex; flex-direction: column; gap: 16px; }
 .testimonials__masonry img { display: block; width: 100%; height: auto; border-radius: 20px; }
+.testimonials__mobile-frame { display: none; }
 
 .final-cta {
   height: 675px;
@@ -842,4 +843,149 @@ a { color: inherit; }
   .footer__links,
   .footer__links > strong,
   .footer__links a { width: 100%; }
+}
+
+/* Frames finais do Figma, exclusivos para celular e tablet. */
+@media (max-width: 1024px) {
+  .hero {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 800 / 1172;
+    background: #b9a6a4;
+  }
+
+  .hero::before,
+  .hero__visual,
+  .hero__content { display: none; }
+
+  .hero__mobile-art {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__mobile-whatsapp {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    left: 15.438%;
+    top: 86.259%;
+    width: 69.125%;
+    height: 8.007%;
+    border-radius: 999px;
+  }
+
+  .hero__mobile-whatsapp:focus-visible {
+    outline: 3px solid #302019;
+    outline-offset: 4px;
+  }
+
+  .about {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    background: #f1e9e1;
+  }
+
+  .about__mobile-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 800 / 1770;
+    object-fit: cover;
+  }
+
+  .about__word,
+  .about__portrait,
+  .about__copy { display: none; }
+
+  .testimonials {
+    height: auto;
+    padding: 60px 0 80px;
+  }
+
+  .testimonials__masonry { display: none; }
+
+  .testimonials__mobile-frame {
+    display: block;
+    position: relative;
+    width: min(800px, 100%);
+    aspect-ratio: 800 / 1520;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f1e9e1;
+  }
+
+  .testimonials__mobile-card {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .testimonials__mobile-card img {
+    position: absolute;
+    display: block;
+    max-width: none;
+  }
+
+  .testimonials__mobile-card--1 { left: 6.032%; top: 6.328%; width: 44.439%; height: 47.826%; }
+  .testimonials__mobile-card--1 img { left: -6.43%; top: -11.18%; width: 134.64%; height: 116.28%; }
+
+  .testimonials__mobile-card--2 { left: 6.887%; top: 55.301%; width: 43.473%; height: 41.439%; }
+  .testimonials__mobile-card--2 img { left: -5.11%; top: -17.3%; width: 131.11%; height: 157.06%; }
+
+  .testimonials__mobile-card--3 { left: 51.927%; top: 6.024%; width: 43.409%; height: 37.477%; }
+  .testimonials__mobile-card--3 img { left: -13.38%; top: 0; width: 128.96%; height: 106.42%; }
+
+  .testimonials__mobile-card--4 { left: 51.888%; top: 59.968%; width: 43.487%; height: 14.897%; }
+  .testimonials__mobile-card--4 img { left: -13.22%; top: -13.8%; width: 126.03%; height: 127.91%; }
+
+  .testimonials__mobile-card--5 { left: 52.024%; top: 76.972%; width: 43.351%; height: 10.158%; }
+  .testimonials__mobile-card--5 img { left: -5.94%; top: -296.41%; width: 134.47%; height: 656.41%; }
+
+  .testimonials__mobile-card--6 { left: 51.927%; top: 44.555%; width: 43.428%; height: 14.33%; }
+  .testimonials__mobile-card--6 img { left: -6.22%; top: -4.58%; width: 117.1%; height: 120.32%; }
+
+  .final-cta {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 800 / 722;
+    margin-top: 0;
+    background: #f1e9e1;
+  }
+
+  .final-cta::before,
+  .final-cta__copy,
+  .final-cta__portrait { display: none; }
+
+  .final-cta__mobile-art {
+    display: block;
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .footer {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .footer__grid,
+  .footer__bottom { display: none; }
+
+  .footer__mobile-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 800 / 125;
+    object-fit: cover;
+  }
 }
