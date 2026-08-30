@@ -57,10 +57,12 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
   white-space:nowrap;
   box-shadow:none;
 }
-.hotspot[data-card="mentoria-ao-vivo"]::before,
+.hotspot[data-card="mentoria-ao-vivo"]::before{content:"";pointer-events:none}
 .hotspot[data-card="mentoria-ao-vivo"]::after{content:none}
 .mlc-cta-label{display:block;flex:0 0 auto}
-.mlc-cta-arrow{display:block;flex:0 0 auto;font-family:'Cormorant Garamond',Georgia,serif;font-size:22.7px;font-weight:400;line-height:.65;letter-spacing:0}
+.mlc-cta-arrow{display:block;flex:0 0 auto;font-family:'Cormorant Garamond',Georgia,serif;font-size:22.7px;font-weight:400;line-height:.65;letter-spacing:0;transition:transform .28s cubic-bezier(.2,.75,.25,1)}
+.hotspot[data-card="mentoria-ao-vivo"]:hover .mlc-cta-arrow,
+.hotspot[data-card="mentoria-ao-vivo"]:focus-visible .mlc-cta-arrow{transform:translate(3px,-3px)}
 .hotspot:hover,.hotspot:focus-visible{transform:translateY(-3px);filter:drop-shadow(0 9px 9px rgba(63,43,35,.24))}
 .hotspot:hover::before,.hotspot:focus-visible::before{opacity:1;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);animation:button-shine .72s ease-out both}
 .hotspot:hover::after,.hotspot:focus-visible::after{animation:arrow-flight .58s cubic-bezier(.2,.75,.25,1) both}
