@@ -14,7 +14,7 @@ export default function MlcOnlineObrigadoPage() {
         src="https://mentoria-online-mlc-2026.stayai.space/mlc-online-obrigado/"
         title="Página de obrigado — Método Lash Campeã"
         loading="eager"
-        allow="fullscreen"
+        allow="autoplay; encrypted-media; fullscreen"
       />
     </main>
   );
