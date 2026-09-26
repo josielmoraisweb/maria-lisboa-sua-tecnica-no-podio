@@ -4,6 +4,10 @@ import styles from "../mentoria-mlc/page.module.css";
 export const metadata: Metadata = {
   title: "Parabéns, campeã! — Método Lash Campeã",
   description: "Seus próximos passos no Método Lash Campeã com Maria Lisboa.",
+  icons: {
+    icon: [{ url: "/mlc-favicon.png", type: "image/png" }],
+    shortcut: "/mlc-favicon.png",
+  },
 };
 
 export default function MlcOnlineObrigadoPage() {
