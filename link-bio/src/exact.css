@@ -47,7 +47,7 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .hotspot[data-card="mentoria-ao-vivo"]::before{content:none}
 .hotspot[data-card="mentoria-ao-vivo"]::after{content:none}
 .mlc-cta-label{display:block;flex:0 0 auto}
-.mlc-cta-arrow{display:block;flex:0 0 auto;font-family:'Cormorant Garamond',Georgia,serif;font-size:22.7px;font-weight:400;line-height:.65;letter-spacing:0}
+.mlc-cta-arrow{display:block;flex:0 0 auto;width:15px;height:15px}
 .hotspot:focus-visible{outline:4px solid rgba(117,80,68,.55);outline-offset:4px}
 .card-effect{position:absolute;z-index:19;left:var(--x);top:var(--y);width:var(--w);height:var(--h);overflow:hidden;border-radius:30px;pointer-events:none;transform-origin:center;isolation:isolate}
 .site-mobile .card-effect.card-pop{background:url('./assets/figma_mobile_exact.webp?v=rounded30') calc(-1 * var(--x)) calc(-1 * var(--y))/800px 3791px no-repeat}
