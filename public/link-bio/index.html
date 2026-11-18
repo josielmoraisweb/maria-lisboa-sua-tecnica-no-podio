@@ -73,13 +73,51 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .motion-ready .reveal.is-visible .slice-content{opacity:1;transform:translate(0,0)}
 @media(min-width:901px){.stage-shell{width:1920px;height:2949px}.site-mobile{display:none}.site-desktop{display:block}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready .reveal .slice-content{opacity:1;transform:none;transition:none}}
+
+/* Editable call to action over the original online-course artwork. */
+.hotspot[data-card="mentoria-online"]{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:0 14px;
+  border:1px solid #d4bd7e;
+  background:linear-gradient(100deg,#9e803c 0%,#eed880 63%,#bca04f 100%);
+  color:#30271d;
+  font-family:Poppins,Arial,sans-serif;
+  font-size:11.34px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:1.05px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* Restore only the background formerly covered by the wait-list badge. */
+.online-status-background{
+  position:absolute;
+  display:block;
+  pointer-events:none;
+  background-image:url('./assets/mlc-online-background-patch.png');
+  background-repeat:no-repeat;
+}
+.site-desktop .online-status-background{
+  left:553px;top:26px;width:161px;height:28px;
+  background-size:768px 298.65px;
+  background-position:-379px -47px;
+}
+.site-mobile .online-status-background{
+  left:387px;top:54px;width:152px;height:26px;
+  background-size:727.2px 282.78px;
+  background-position:-358.87px -44.5px;
+}
 </style>
 </head>
 <body>
   <div class="stage-shell" id="stage-shell">
     <main class="site site-mobile" aria-label="Maria Lisboa">
       <section class="slice reveal" style="--y:0px;--h:783px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=rounded30" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:783px;--h:295px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=rounded30" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:783px;--h:295px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=rounded30" alt="" /><span class="online-status-background" aria-hidden="true"></span></div></section>
       <section class="slice reveal reveal-right" style="--y:1078px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=rounded30" alt="" /></div></section>
       <section class="slice reveal reveal-left" style="--y:1354px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=rounded30" alt="" /></div></section>
       <section class="slice reveal reveal-right" style="--y:1630px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=rounded30" alt="" /></div></section>
@@ -98,7 +136,7 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
       <div class="card-effect" style="--x:53px;--y:1650px;--w:695px;--h:258px" data-card="curso-iniciante"></div>
       <div class="card-effect" style="--x:53px;--y:1930px;--w:695px;--h:257px" data-card="palestras"></div>
       <div class="card-effect" style="--x:53px;--y:2210px;--w:695px;--h:256px" data-card="studio"></div>
-      <a class="hotspot button-gold" style="--x:389px;--y:992px;--w:285px;--h:41px" data-link="mentoriaOnline" data-card="mentoria-online" aria-label="Mentoria Método Lash Campeã — curso on-line"></a>
+      <a class="hotspot button-gold" style="--x:389px;--y:992px;--w:285px;--h:41px" data-link="mentoriaOnline" data-card="mentoria-online" aria-label="Quero garantir a minha vaga — Método Lash Campeã on-line"><span class="mlc-cta-label">Quero garantir a minha vaga</span><span class="mlc-cta-arrow" aria-hidden="true">↗</span></a>
       <a class="hotspot" style="--x:118px;--y:1264px;--w:285px;--h:41px" data-link="mentoriaAoVivo" data-card="mentoria-ao-vivo" aria-label="Mentoria Método Lash Campeã — mentoria ao vivo ou presencial"><span class="mlc-cta-label">Quero garantir minha vaga</span><span class="mlc-cta-arrow" aria-hidden="true">↗</span></a>
       <a class="hotspot" style="--x:340px;--y:1532px;--w:285px;--h:41px" data-link="tecnicaPodio" data-card="tecnica-podio" aria-label="Sua Técnica no Pódio"></a>
       <a class="hotspot" style="--x:138px;--y:1808px;--w:219px;--h:41px" data-link="cursoIniciante" data-card="curso-iniciante" aria-label="Curso Iniciante"></a>
@@ -109,7 +147,7 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
     <main class="site site-desktop" aria-label="Maria Lisboa">
       <section class="slice reveal" style="--y:0px;--h:989px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=rounded30" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:989px;--h:298px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=rounded30" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:989px;--h:298px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=rounded30" alt="" /><span class="online-status-background" aria-hidden="true"></span></div></section>
       <section class="slice reveal reveal-right" style="--y:1287px;--h:323px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=rounded30" alt="" /></div></section>
       <section class="slice reveal reveal-left" style="--y:1610px;--h:346px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=rounded30" alt="" /></div></section>
       <section class="slice reveal" style="--y:1956px;--h:878px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=rounded30" alt="" /></div></section>
@@ -125,7 +163,7 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
       <div class="card-effect" style="--x:987px;--y:1313px;--w:733px;--h:272px" data-card="curso-iniciante"></div>
       <div class="card-effect" style="--x:200px;--y:1636px;--w:734px;--h:272px" data-card="studio"></div>
       <div class="card-effect" style="--x:987px;--y:1636px;--w:733px;--h:272px" data-card="palestras"></div>
-      <a class="hotspot button-gold" style="--x:556px;--y:1184px;--w:301px;--h:43px" data-link="mentoriaOnline" data-card="mentoria-online" aria-label="Mentoria Método Lash Campeã — curso on-line"></a>
+      <a class="hotspot button-gold" style="--x:556px;--y:1184px;--w:301px;--h:43px" data-link="mentoriaOnline" data-card="mentoria-online" aria-label="Quero garantir a minha vaga — Método Lash Campeã on-line"><span class="mlc-cta-label">Quero garantir a minha vaga</span><span class="mlc-cta-arrow" aria-hidden="true">↗</span></a>
       <a class="hotspot" style="--x:1076px;--y:1176px;--w:301px;--h:43px" data-link="mentoriaAoVivo" data-card="mentoria-ao-vivo" aria-label="Mentoria Método Lash Campeã — mentoria ao vivo ou presencial"><span class="mlc-cta-label">Quero garantir minha vaga</span><span class="mlc-cta-arrow" aria-hidden="true">↗</span></a>
       <a class="hotspot" style="--x:523px;--y:1490px;--w:301px;--h:43px" data-link="tecnicaPodio" data-card="tecnica-podio" aria-label="Sua Técnica no Pódio"></a>
       <a class="hotspot" style="--x:1096px;--y:1490px;--w:231px;--h:43px" data-link="cursoIniciante" data-card="curso-iniciante" aria-label="Curso Iniciante"></a>
@@ -135,13 +173,13 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
     </main>
   </div>
   <script>const links = {
-  mentoriaOnline: "https://chat.whatsapp.com/IKb6xn73n7gFJvWmgeunzF?s=cl&p=i&ilr=2",
+  mentoriaOnline: "https://marialisboaacademy.com.br/mlc-online",
   mentoriaAoVivo: "/mentoria-mlc",
   tecnicaPodio: "/sua-tecnica-no-podio",
   cursoIniciante: "https://api.whatsapp.com/send?phone=5535997458386&text=Ol%C3%A1%2C%20Maria%20Lisboa!%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20curso%20*INICIANTE%20LASH*.",
   palestras: "https://api.whatsapp.com/send?phone=5535997458386&text=Ol%C3%A1%2C%20Maria%20Lisboa!%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20para%20contratar%20sua%20%20*Palestra*",
   studio: "https://api.whatsapp.com/send?phone=5535997458386&text=Ol%C3%A1%2C%20Maria%20Lisboa!%20Gostaria%20de%20*MARCAR%20UM%20HOR%C3%81RIO*"
-};
+};;
 const MOBILE_BREAKPOINT = 900;
 const MOBILE_DESIGN = { width: 800, height: 3791 };
 const DESKTOP_DESIGN = { width: 1920, height: 2949 };

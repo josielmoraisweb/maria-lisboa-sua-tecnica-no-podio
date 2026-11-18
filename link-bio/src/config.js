@@ -1,5 +1,5 @@
 export const links = {
-  mentoriaOnline: "https://chat.whatsapp.com/IKb6xn73n7gFJvWmgeunzF?s=cl&p=i&ilr=2",
+  mentoriaOnline: "https://marialisboaacademy.com.br/mlc-online",
   mentoriaAoVivo: "/mentoria-mlc",
   tecnicaPodio: "/sua-tecnica-no-podio",
   cursoIniciante: "https://api.whatsapp.com/send?phone=5535997458386&text=Ol%C3%A1%2C%20Maria%20Lisboa!%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20curso%20*INICIANTE%20LASH*.",

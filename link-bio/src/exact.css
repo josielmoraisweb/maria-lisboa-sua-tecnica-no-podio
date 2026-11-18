@@ -62,3 +62,41 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .motion-ready .reveal.is-visible .slice-content{opacity:1;transform:translate(0,0)}
 @media(min-width:901px){.stage-shell{width:1920px;height:2949px}.site-mobile{display:none}.site-desktop{display:block}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready .reveal .slice-content{opacity:1;transform:none;transition:none}}
+
+/* Editable call to action over the original online-course artwork. */
+.hotspot[data-card="mentoria-online"]{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:0 14px;
+  border:1px solid #d4bd7e;
+  background:linear-gradient(100deg,#9e803c 0%,#eed880 63%,#bca04f 100%);
+  color:#30271d;
+  font-family:Poppins,Arial,sans-serif;
+  font-size:11.34px;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:1.05px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* Restore only the background formerly covered by the wait-list badge. */
+.online-status-background{
+  position:absolute;
+  display:block;
+  pointer-events:none;
+  background-image:url('./assets/mlc-online-background-patch.png');
+  background-repeat:no-repeat;
+}
+.site-desktop .online-status-background{
+  left:553px;top:26px;width:161px;height:28px;
+  background-size:768px 298.65px;
+  background-position:-379px -47px;
+}
+.site-mobile .online-status-background{
+  left:387px;top:54px;width:152px;height:26px;
+  background-size:727.2px 282.78px;
+  background-position:-358.87px -44.5px;
+}
